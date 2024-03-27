@@ -18,7 +18,12 @@ namespace JobApplication
             DataTable dataTable = Load();
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                JobSeeker jobSeeker = (JobSeeker)GetUser(dataRow);
+                JobSeeker jobSeeker = null;
+                jobSeeker.UserName = dataRow[0].ToString();
+                jobSeeker.Email = dataRow[1].ToString();
+                jobSeeker.Password = dataRow[2].ToString();
+                jobSeeker.PhoneNumber = dataRow[3].ToString();
+                jobSeeker.FullName = dataRow[4].ToString();
                 jobSeeker.Address = dataRow[5].ToString();
                 jobSeeker.BirthDate = (DateTime)dataRow[6];
                 jobSeeker.AboutMe = dataRow[7].ToString();
@@ -37,7 +42,12 @@ namespace JobApplication
             DataTable dataTable = dBConn.Load(sqlStr);
 
             DataRow dataRow = dataTable.Rows[0];
-            JobSeeker jobSeeker = (JobSeeker)GetUser(dataRow);
+            JobSeeker jobSeeker = null;
+            jobSeeker.UserName = dataRow[0].ToString();
+            jobSeeker.Email = dataRow[1].ToString();
+            jobSeeker.Password = dataRow[2].ToString();
+            jobSeeker.PhoneNumber = dataRow[3].ToString();
+            jobSeeker.FullName = dataRow[4].ToString();
             jobSeeker.Address = dataRow[5].ToString();
             jobSeeker.BirthDate = (DateTime)dataRow[6];
             jobSeeker.AboutMe = dataRow[7].ToString();

@@ -19,7 +19,12 @@ namespace JobApplication
             DataTable dataTable = Load();
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                Employer employer = (Employer)GetUser(dataRow);
+                Employer employer = null;
+                employer.UserName = dataRow[0].ToString();
+                employer.Email = dataRow[1].ToString();
+                employer.Password = dataRow[2].ToString();
+                employer.PhoneNumber = dataRow[3].ToString();
+                employer.FullName = dataRow[4].ToString();
                 foreach (int postId in empPostDAO.GetPostIds(employer.UserName))
                 {
                     employer.Posts.Add(postDAO.GetPost(postId));
@@ -35,7 +40,12 @@ namespace JobApplication
             DataTable dataTable = dBConn.Load(sqlStr);
 
             DataRow dataRow = dataTable.Rows[0];
-            Employer employer = (Employer)GetUser(dataRow);
+            Employer employer = null;
+            employer.UserName = dataRow[0].ToString();
+            employer.Email = dataRow[1].ToString();
+            employer.Password = dataRow[2].ToString();
+            employer.PhoneNumber = dataRow[3].ToString();
+            employer.FullName = dataRow[4].ToString();
             foreach (int postId in empPostDAO.GetPostIds(employer.UserName))
             {
                 employer.Posts.Add(postDAO.GetPost(postId));

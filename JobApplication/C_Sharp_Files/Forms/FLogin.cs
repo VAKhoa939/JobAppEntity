@@ -12,9 +12,35 @@ namespace JobApplication
 {
     public partial class FLogin : Form
     {
+        private CompanyDAO companyDAO = new CompanyDAO();
+        private EmployerDAO employerDAO = new EmployerDAO();
+        private JobSeekerDAO jobSeekerDAO = new JobSeekerDAO();
+        private List<Company> listCompany;
+        private List<Employer> listEmployer;
+        private List<JobSeeker> listJobSeeker;
         public FLogin()
         {
             InitializeComponent();
+            listCompany = companyDAO.GetList();
+            listEmployer = employerDAO.GetList();
+            listJobSeeker = jobSeekerDAO.GetList();
+        }
+
+        private void pnlRegister_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            
+            if (rdoJobSeekerLogin.Checked) 
+            {
+                if ()
+                this.Hide();
+                
+            }
+            
         }
     }
 }

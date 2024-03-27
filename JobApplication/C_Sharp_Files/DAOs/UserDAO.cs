@@ -21,7 +21,7 @@ namespace JobApplication
 
         public DataTable Load()
         {
-            sqlStr = string.Format("SELECT * FROM '{0}'", tableName);
+            sqlStr = string.Format("SELECT * FROM {0}", tableName);
             return dBConn.Load(sqlStr);
         }
 
