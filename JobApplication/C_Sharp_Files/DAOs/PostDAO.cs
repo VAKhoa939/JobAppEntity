@@ -17,6 +17,7 @@ namespace JobApplication
         private PostFormCatalogDAO postFormDAO = new PostFormCatalogDAO();
         private PostImgCatalogDAO postImgDAO = new PostImgCatalogDAO();
         private PostDescCatalogDAO postDescDAO = new PostDescCatalogDAO();
+        private PostTagCatalogDAO postTagDAO = new PostTagCatalogDAO();
 
         public DataTable Load()
         {
@@ -43,6 +44,10 @@ namespace JobApplication
                 foreach (Image image in postImgDAO.GetImages(post.Id))
                 {
                     post.Images.Add(image);
+                }
+                foreach (string tag in postTagDAO.GetTags(post.Id))
+                {
+                    post.Tags.Add(tag);
                 }
                 foreach (int formId in postFormDAO.GetFormIds(post.Id))
                 {
@@ -73,6 +78,10 @@ namespace JobApplication
             {
                 post.Images.Add(image);
             }
+            foreach (string tag in postTagDAO.GetTags(post.Id))
+            {
+                post.Tags.Add(tag);
+            }
             foreach (int formId in postFormDAO.GetFormIds(post.Id))
             {
                 post.ApplyForms.Add(applyFormDAO.GetApplyFormPostId(formId));
@@ -93,6 +102,10 @@ namespace JobApplication
             {
                 postImgDAO.Insert(post.Id, postImage);
             }
+            foreach (string tag in post.Tags)
+            {
+                postTagDAO.Insert(post.Id, tag);
+            }
             foreach (ApplyForm applyForm in post.ApplyForms)
             {
                 postFormDAO.Insert(post.Id, applyForm.PostFormId);
@@ -107,6 +120,7 @@ namespace JobApplication
 
             postDescDAO.DeletePostId(post.Id);
             postImgDAO.DeletePostId(post.Id);
+            postTagDAO.DeletePostId(post.Id);
             postFormDAO.DeletePostId(post.Id);
             foreach (ApplyForm applyForm in post.ApplyForms)
             {
@@ -129,6 +143,11 @@ namespace JobApplication
             foreach (Image image in post.Images)
             {
                 postImgDAO.Insert(post.Id, image);
+            }
+            postTagDAO.DeletePostId(post.Id);
+            foreach (string tag in post.Tags)
+            {
+                postTagDAO.Insert(post.Id, tag);
             }
             postFormDAO.DeletePostId(post.Id);
             foreach (ApplyForm applyForm in post.ApplyForms)

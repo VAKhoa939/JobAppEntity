@@ -26,7 +26,7 @@ namespace JobApplication
             List<Image> images = new List<Image>();
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                images.Add((Image)dataRow[1]);
+                images.Add(ImageUtil.ByteToImage((byte[])dataRow[1]));
             }
             return images;
         }

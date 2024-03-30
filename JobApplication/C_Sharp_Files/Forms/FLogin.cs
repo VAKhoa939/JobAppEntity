@@ -34,15 +34,18 @@ namespace JobApplication
         private void btnLogin_Click(object sender, EventArgs e)
         {
             
-            if (rdoJobSeekerLogin.Checked) 
+            if (rdoJobSeekerLogin.Checked)
             {
-
+                this.Hide();
+                FAllPosts fAllPosts = new FAllPosts();
+                fAllPosts.Show();
             }
-            this.Hide();
-            //FAllPosts fAllPosts = new FAllPosts();
-            //fAllPosts.Show();
-            FCreatePost fCreatePost = new FCreatePost();
-            fCreatePost.Show();
+            if (rdoEmployerLogin.Checked)
+            {
+                this.Hide();
+                FCreatePost fCreatePost = new FCreatePost();
+                fCreatePost.Show();
+            }
         }
     }
 }

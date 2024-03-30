@@ -8,13 +8,14 @@ create table JobSeeker (
 	Fullname nvarchar(100), 
 	Address nvarchar(100), 
 	Birthdate DateTime, 
-	Aboutme nvarchar(255)
+	Aboutme nvarchar(255),
+	Portraitimage Image
 );
 
 insert into JobSeeker (Username, Email, Password, Phonenumber, Fullname, Address, Birthdate, Aboutme) 
 values 
-	('', '', '', '', '', '', '', ''),
-	('', '', '', '', '', '', '', ''),
-	('', '', '', '', '', '', '', '');
+	('', '', '', '', '', '', '', '', ''),
+	('', '', '', '', '', '', '', '', ''),
+	('', '', '', '', '', '', '', '', '');
 
 select * from JobSeeker;

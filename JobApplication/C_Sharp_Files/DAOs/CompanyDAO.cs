@@ -29,7 +29,7 @@ namespace JobApplication
             {
                 Company company = null;
                 company.Name = dataRow[0].ToString();
-                company.Logo = (Image)dataRow[1];
+                company.Logo = ImageUtil.ByteToImage((byte[])dataRow[1]);
                 foreach (string empName in comEmpDAO.GetEmpNames(company.Name))
                 {
                     company.Employers.Add(employerDAO.GetEmployer(empName));
@@ -47,7 +47,7 @@ namespace JobApplication
             DataRow dataRow = dataTable.Rows[0];
             Company company = null;
             company.Name = companyName;
-            company.Logo = (Image)dataRow[1];
+            company.Logo = ImageUtil.ByteToImage((byte[])dataRow[1]);
             foreach (string empName in comEmpDAO.GetEmpNames(company.Name))
             {
                 company.Employers.Add(employerDAO.GetEmployer(empName));
