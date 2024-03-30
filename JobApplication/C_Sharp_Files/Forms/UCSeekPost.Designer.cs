@@ -62,6 +62,7 @@
             this.lklblTenBaiDang.TabIndex = 1;
             this.lklblTenBaiDang.TabStop = true;
             this.lklblTenBaiDang.Text = "linkLabel1";
+            this.lklblTenBaiDang.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblTenBaiDang_LinkClicked);
             // 
             // panel1
             // 
@@ -129,14 +130,14 @@
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
-            // UCBaiDang
+            // UCSeekPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Controls.Add(this.lblThoiGianDang);
             this.Controls.Add(this.panel1);
-            this.Name = "UCBaiDang";
+            this.Name = "UCSeekPost";
             this.Size = new System.Drawing.Size(520, 400);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -21,7 +21,7 @@ namespace JobApplication
         {
             lblSoLuongKQ.Text = "There are 9 results";
 
-            Image logo = Image.FromFile("D:\\21110CLA2 - 5\\Năm 3 - HK2\\Window Programming\\Winform_code\\GitPull\\WinForm-JobApp\\JobApplication\\Image\\Cat.jpg");
+            Image logo = Image.FromFile("D:\\21110CLA2 - 5\\Năm 3 - HK2\\Window Programming\\Winform_code\\GitPull\\copy\\WinForm-JobApp\\JobApplication\\Images\\Cat.jpg");
             logo = new Bitmap(logo, new Size(70, 70));
             Font font = new Font("Times New Roman", 11);
 

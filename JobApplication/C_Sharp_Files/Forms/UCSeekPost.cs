@@ -16,5 +16,14 @@ namespace JobApplication
         {
             InitializeComponent();
         }
+
+        public void lklblTenBaiDang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ((Form)this.TopLevelControl).Close();
+            FFormManagement fFormManagement = new FFormManagement();
+            fFormManagement.Show();
+            //FPostDetail fPostDetail = new FPostDetail();
+            //fPostDetail.Show();
+        }
     }
 }
