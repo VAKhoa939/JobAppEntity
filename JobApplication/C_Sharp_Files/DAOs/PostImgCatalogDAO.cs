@@ -33,7 +33,7 @@ namespace JobApplication
 
         public void Insert(int postId, Image image)
         {
-            sqlStr = string.Format("INSERT INTO PostImgCatalog (Postid, Postimage) VALUES ('{0}', '{1}')", postId, image);
+            sqlStr = string.Format("INSERT INTO PostImgCatalog (Postid, Postimage) VALUES ('{0}', '{1}')", postId, ImageUtil.ImageToByte(image));
             dBConn.Execute(sqlStr, "Insert");
         }
 
@@ -45,7 +45,7 @@ namespace JobApplication
 
         public void DeleteJobDesc(Image image)
         {
-            sqlStr = string.Format("DELETE FROM PostImgCatalog WHERE Postimage = '{0}'", image);
+            sqlStr = string.Format("DELETE FROM PostImgCatalog WHERE Postimage = '{0}'", ImageUtil.ImageToByte(image));
             dBConn.Execute(sqlStr, "Delete");
         }
     }

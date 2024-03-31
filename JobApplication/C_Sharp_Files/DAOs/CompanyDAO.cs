@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace JobApplication
 {
@@ -57,7 +58,7 @@ namespace JobApplication
 
         public void Insert(Company company)
         {
-            sqlStr = string.Format("INSERT INTO Company (Name, Logo) VALUES ('{0}', '{1}')", company.Name, company.Logo);
+            sqlStr = string.Format("INSERT INTO Company (Name, Logo) VALUES ('{0}', '{1}')", company.Name, ImageUtil.ImageToByte(company.Logo));
             dBConn.Execute(sqlStr, "Insert");
 
             foreach (Employer employer in company.Employers)
@@ -79,7 +80,7 @@ namespace JobApplication
 
         public void Update(Company company)
         {
-            sqlStr = string.Format("UPDATE Company SET Logo = '{0}' WHERE Name = '{1}'", company.Logo, company.Name);
+            sqlStr = string.Format("UPDATE Company SET Logo = '{0}' WHERE Name = '{1}'", ImageUtil.ImageToByte(company.Logo), company.Name);
             dBConn.Execute(sqlStr, "Update");
 
             comEmpDAO.DeleteComName(company.Name);

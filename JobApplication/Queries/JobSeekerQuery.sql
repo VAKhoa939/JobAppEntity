@@ -9,13 +9,13 @@ create table JobSeeker (
 	Address nvarchar(100), 
 	Birthdate DateTime, 
 	Aboutme nvarchar(255),
-	Portraitimage Image
+	Portraitimage varbinary(max)
 );
 
-insert into JobSeeker (Username, Email, Password, Phonenumber, Fullname, Address, Birthdate, Aboutme) 
+insert into JobSeeker (Username, Email, Password, Phonenumber, Fullname, Address, Birthdate, Aboutme, Portraitimage) 
 values 
-	('', '', '', '', '', '', '', '', ''),
-	('', '', '', '', '', '', '', '', ''),
-	('', '', '', '', '', '', '', '', '');
+	('', '', '', '', '', '', '', '', '0x'),
+	('', '', '', '', '', '', '', '', '0x'),
+	('', '', '', '', '', '', '', '', '0x');
 
 select * from JobSeeker;

@@ -39,7 +39,7 @@ namespace JobApplication
                 }
             }
 
-            Image logo = Image.FromFile("D:\\21110CLA2 - 5\\Năm 3 - HK2\\Window Programming\\Winform_code\\GitPull\\copy\\WinForm-JobApp\\JobApplication\\Images\\Cat.jpg");
+            Image logo = ImageUtil.UploadImage();
             logo = new Bitmap(logo, new Size(70, 70));
 
             for (int i = 0; i < 9; i++)

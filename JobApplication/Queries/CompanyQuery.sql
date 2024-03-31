@@ -2,13 +2,13 @@
 
 create table Company (
 	Name nvarchar(30),
-	Logo Image,
+	Logo varbinary(max)
 );
 
 insert into Company (Name, Logo) 
 values 
-	('', ''),
-	('', ''),
-	('', '');
+	('', '0x'),
+	('', '0x'),
+	('', '0x');
 
 select * from Company;
