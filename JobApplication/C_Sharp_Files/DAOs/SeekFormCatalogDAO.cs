@@ -7,17 +7,8 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class SeekFormCatalogDAO
+    class SeekFormCatalogDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
-
-        public DataTable GetCatalog()
-        {
-            sqlStr = string.Format("SELECT * FROM SeekFormCatalog");
-            return dBConn.Load(sqlStr);
-        }
-
         public string GetSeekName(int formId)
         {
             sqlStr = string.Format("SELECT * FROM SeekFormCatalog WHERE Formid = '{0}'", formId);

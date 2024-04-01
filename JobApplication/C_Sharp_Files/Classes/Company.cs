@@ -13,6 +13,13 @@ namespace JobApplication
         private Image logo;
         private List<Employer> employers;
 
+        public Company(string name, Image logo)
+        {
+            Name = name;
+            Logo = logo;
+            employers = new List<Employer>();
+        }
+
         public Company(string name, Image logo, List<Employer> employers)
         {
             this.name = name;

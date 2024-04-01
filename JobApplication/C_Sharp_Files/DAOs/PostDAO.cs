@@ -8,22 +8,14 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class PostDAO
+    class PostDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
         private ApplyFormDAO applyFormDAO = new ApplyFormDAO();
         private EmpPostCatalogDAO empPostDAO = new EmpPostCatalogDAO();
         private PostFormCatalogDAO postFormDAO = new PostFormCatalogDAO();
         private PostImgCatalogDAO postImgDAO = new PostImgCatalogDAO();
         private PostDescCatalogDAO postDescDAO = new PostDescCatalogDAO();
         private PostTagCatalogDAO postTagDAO = new PostTagCatalogDAO();
-
-        public DataTable Load()
-        {
-            sqlStr = string.Format("SELECT * FROM Post");
-            return dBConn.Load(sqlStr);
-        }
 
         public List<Post> GetList()
         {

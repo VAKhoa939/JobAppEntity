@@ -7,17 +7,8 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class EmpPostCatalogDAO
+    class EmpPostCatalogDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
-
-        public DataTable GetCatalog()
-        {
-            sqlStr = string.Format("SELECT * FROM EmpPostCatalog");
-            return dBConn.Load(sqlStr);
-        }
-
         public string GetEmpName(int postId)
         {
             sqlStr = string.Format("SELECT * FROM EmpPostCatalog WHERE Postid = '{0}'", postId);

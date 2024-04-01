@@ -7,18 +7,10 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class ApplyFormDAO
+    class ApplyFormDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
         private SeekFormCatalogDAO seekFormDAO = new SeekFormCatalogDAO();
         private PostFormCatalogDAO postFormDAO = new PostFormCatalogDAO();
-
-        public DataTable Load()
-        {
-            sqlStr = string.Format("SELECT * FROM ApplyForm");
-            return dBConn.Load(sqlStr);
-        }
 
         public List<ApplyForm> GetList()
         {

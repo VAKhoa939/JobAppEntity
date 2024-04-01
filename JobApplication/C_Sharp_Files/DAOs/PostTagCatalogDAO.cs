@@ -7,17 +7,8 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class PostTagCatalogDAO
+    class PostTagCatalogDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
-
-        public DataTable GetCatalog()
-        {
-            sqlStr = string.Format("SELECT * FROM PostTagCatalogDAO");
-            return dBConn.Load(sqlStr);
-        }
-
         public List<string> GetTags(int postId)
         {
             sqlStr = string.Format("SELECT * FROM PostTagCatalogDAO WHERE Postid = '{0}'", postId);

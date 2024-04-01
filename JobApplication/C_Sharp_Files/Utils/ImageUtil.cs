@@ -13,9 +13,8 @@ namespace JobApplication
     {
         public static byte[] ImageToByte(Image image)
         {
-            MemoryStream memoryStream = new MemoryStream();
-            image.Save(memoryStream, image.RawFormat);
-            return memoryStream.ToArray();
+            ImageConverter imageConverter = new ImageConverter();
+            return (byte[])imageConverter.ConvertTo(image, typeof(byte[]));
         }
 
         public static Image ByteToImage(byte[] bytes)

@@ -7,17 +7,8 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class PostFormCatalogDAO
+    class PostFormCatalogDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
-
-        public DataTable GetCatalog()
-        {
-            sqlStr = string.Format("SELECT * FROM PostFormCatalog");
-            return dBConn.Load(sqlStr);
-        }
-
         public int GetPostId(int formId)
         {
             sqlStr = string.Format("SELECT * FROM PostFormCatalog WHERE Formid = '{0}'", formId);

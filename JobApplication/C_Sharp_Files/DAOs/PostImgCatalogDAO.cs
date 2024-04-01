@@ -8,17 +8,8 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class PostImgCatalogDAO
+    class PostImgCatalogDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
-
-        public DataTable GetCatalog()
-        {
-            sqlStr = string.Format("SELECT * FROM PostImgCatalog");
-            return dBConn.Load(sqlStr);
-        }
-
         public List<Image> GetImages(int postId)
         {
             sqlStr = string.Format("SELECT * FROM PostImgCatalog WHERE Postid = '{0}'", postId);

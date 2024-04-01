@@ -9,18 +9,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace JobApplication
 {
-    class CompanyDAO
+    class CompanyDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
         private EmployerDAO employerDAO = new EmployerDAO();
         private ComEmpCatalogDAO comEmpDAO = new ComEmpCatalogDAO();
-
-        public DataTable Load()
-        {
-            sqlStr = string.Format("SELECT * FROM Company");
-            return dBConn.Load(sqlStr);
-        }
 
         public List<Company> GetList()
         {

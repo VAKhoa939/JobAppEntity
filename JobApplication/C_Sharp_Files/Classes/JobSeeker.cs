@@ -11,15 +11,13 @@ namespace JobApplication
     {
         private string address;
         private DateTime birthDate;
-        private string aboutMe;
         private Image portraitImage;
         private List<ApplyForm> applyForms;
 
-        public JobSeeker(string userName, string email, string password, string phoneNumber, string fullName, string address, DateTime birthDate, string aboutMe, Image portraitImage, List<ApplyForm> applyForms) : base(userName, email, password, phoneNumber, fullName)
+        public JobSeeker(string userName, string email, string password, string phoneNumber, string fullName, string address, DateTime birthDate, Image portraitImage, List<ApplyForm> applyForms) : base(userName, email, password, phoneNumber, fullName)
         {
             this.address = address;
             this.birthDate = birthDate;
-            this.aboutMe = aboutMe;
             this.portraitImage = portraitImage;
             this.applyForms = applyForms;
         }
@@ -34,12 +32,6 @@ namespace JobApplication
         {
             get { return birthDate; }
             set { birthDate = value; }
-        }
-
-        public string AboutMe
-        {
-            get { return aboutMe; }
-            set { aboutMe = value; }
         }
 
         public Image PortraitImage

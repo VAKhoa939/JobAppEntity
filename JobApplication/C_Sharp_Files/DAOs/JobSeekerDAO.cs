@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class JobSeekerDAO : UserDAO
+    class JobSeekerDAO : AnyDAO
     {
         private ApplyFormDAO applyFormDAO = new ApplyFormDAO();
         private SeekFormCatalogDAO seekFormDAO = new SeekFormCatalogDAO();
 
-        public new List<JobSeeker> GetList()
+        public List<JobSeeker> GetList()
         {
             List<JobSeeker> jobSeekers = new List<JobSeeker>();
             DataTable dataTable = Load();
@@ -26,8 +26,7 @@ namespace JobApplication
                 jobSeeker.FullName = dataRow[4].ToString();
                 jobSeeker.Address = dataRow[5].ToString();
                 jobSeeker.BirthDate = (DateTime)dataRow[6];
-                jobSeeker.AboutMe = dataRow[7].ToString();
-                jobSeeker.PortraitImage = ImageUtil.ByteToImage((byte[])dataRow[8]);
+                jobSeeker.PortraitImage = ImageUtil.ByteToImage((byte[])dataRow[7]);
                 foreach (int formId in seekFormDAO.GetFormIds(jobSeeker.UserName))
                 {
                     jobSeeker.ApplyForms.Add(applyFormDAO.GetApplyFormSeekId(formId));
@@ -51,8 +50,7 @@ namespace JobApplication
             jobSeeker.FullName = dataRow[4].ToString();
             jobSeeker.Address = dataRow[5].ToString();
             jobSeeker.BirthDate = (DateTime)dataRow[6];
-            jobSeeker.AboutMe = dataRow[7].ToString();
-            jobSeeker.PortraitImage = ImageUtil.ByteToImage((byte[])dataRow[8]);
+            jobSeeker.PortraitImage = ImageUtil.ByteToImage((byte[])dataRow[7]);
             foreach (int formId in seekFormDAO.GetFormIds(jobSeeker.UserName))
             {
                 jobSeeker.ApplyForms.Add(applyFormDAO.GetApplyFormSeekId(formId));
@@ -62,7 +60,7 @@ namespace JobApplication
 
         public void Insert(JobSeeker jobSeeker)
         {
-            sqlStr = string.Format("INSERT INTO JobSeeker (Username, Email, Password, Phonenumber, Fullname, Address, Birthdate, Aboutme, Potraitimage) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", jobSeeker.UserName, jobSeeker.Email, jobSeeker.Password, jobSeeker.PhoneNumber, jobSeeker.FullName, jobSeeker.Address, jobSeeker.BirthDate.ToString("yyyy-MM-dd"), jobSeeker.AboutMe, ImageUtil.ImageToByte(jobSeeker.PortraitImage));
+            sqlStr = string.Format("INSERT INTO JobSeeker (Username, Email, Password, Phonenumber, Fullname, Address, Birthdate, Potraitimage) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", jobSeeker.UserName, jobSeeker.Email, jobSeeker.Password, jobSeeker.PhoneNumber, jobSeeker.FullName, jobSeeker.Address, jobSeeker.BirthDate.ToString("yyyy-MM-dd"), ImageUtil.ImageToByte(jobSeeker.PortraitImage));
             dBConn.Execute(sqlStr, "Insert");
 
             foreach (ApplyForm applyForm in jobSeeker.ApplyForms)
@@ -84,7 +82,7 @@ namespace JobApplication
 
         public void Update(JobSeeker jobSeeker)
         {
-            sqlStr = string.Format("UPDATE JobSeeker SET, Email = '{0}', Password = '{1}', Phonenumber = '{2}', Fullname = '{3}', Address = '{4}', Birthdate = '{5}', Aboutme = '{6}', Potraitimage = '{7}' WHERE Username = '{8}'", jobSeeker.Email, jobSeeker.Password, jobSeeker.PhoneNumber, jobSeeker.FullName, jobSeeker.Address, jobSeeker.BirthDate.ToString("yyyy-MM-dd"), jobSeeker.AboutMe, ImageUtil.ImageToByte(jobSeeker.PortraitImage), jobSeeker.UserName);
+            sqlStr = string.Format("UPDATE JobSeeker SET, Email = '{0}', Password = '{1}', Phonenumber = '{2}', Fullname = '{3}', Address = '{4}', Birthdate = '{5}', Potraitimage = '{6}' WHERE Username = '{7}'", jobSeeker.Email, jobSeeker.Password, jobSeeker.PhoneNumber, jobSeeker.FullName, jobSeeker.Address, jobSeeker.BirthDate.ToString("yyyy-MM-dd"), ImageUtil.ImageToByte(jobSeeker.PortraitImage), jobSeeker.UserName);
             dBConn.Execute(sqlStr, "Update");
 
             seekFormDAO.DeleteSeekName(jobSeeker.UserName);

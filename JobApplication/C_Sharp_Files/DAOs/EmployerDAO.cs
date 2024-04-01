@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class EmployerDAO : UserDAO
+    class EmployerDAO : AnyDAO
     {
         private PostDAO postDAO = new PostDAO();
         private ComEmpCatalogDAO comEmpDAO = new ComEmpCatalogDAO();
         private EmpPostCatalogDAO empPostDAO = new EmpPostCatalogDAO();
 
-        public new List<Employer> GetList()
+        public List<Employer> GetList()
         {
             List<Employer> employers = new List<Employer>();
             DataTable dataTable = Load();

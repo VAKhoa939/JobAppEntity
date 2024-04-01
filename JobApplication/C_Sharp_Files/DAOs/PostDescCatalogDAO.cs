@@ -12,7 +12,7 @@ namespace JobApplication
         private DBConnection dBConn = new DBConnection();
         private string sqlStr = "";
 
-        public DataTable GetCatalog()
+        public DataTable Load()
         {
             sqlStr = string.Format("SELECT * FROM PostDescCatalog");
             return dBConn.Load(sqlStr);
