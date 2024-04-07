@@ -18,6 +18,7 @@ namespace JobApplication
         private List<Company> listCompany;
         private List<Employer> listEmployer;
         private List<JobSeeker> listJobSeeker;
+
         public FLogin()
         {
             InitializeComponent();
@@ -40,11 +41,17 @@ namespace JobApplication
                 FAllPosts fAllPosts = new FAllPosts();
                 fAllPosts.Show();
             }
-            if (rdoEmployerLogin.Checked)
+            else if (rdoEmployerLogin.Checked)
             {
                 this.Hide();
                 FCreatePost fCreatePost = new FCreatePost();
                 fCreatePost.Show();
+            }
+            else 
+            {
+                this.Hide();
+                FAdmin fAdmin = new FAdmin();
+                fAdmin.Show();
             }
         }
     }

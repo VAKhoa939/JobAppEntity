@@ -39,10 +39,30 @@ namespace JobApplication
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.ExecuteNonQuery();
             }
             catch (Exception exc)
             {
-                MessageBox.Show(action + " that bai\nCau sql: " + sqlStr + "\n" + exc);
+                MessageBox.Show("Failed to " + action + ".\nSQL query: " + sqlStr + "\n" + exc);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void Execute(string sqlStr, string action, byte[] image)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.Parameters.AddWithValue("@image", image);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Failed to " + action + ".\nSQL query: " + sqlStr + "\n" + exc);
             }
             finally
             {

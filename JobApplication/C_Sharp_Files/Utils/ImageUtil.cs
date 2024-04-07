@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,9 @@ namespace JobApplication
     {
         public static byte[] ImageToByte(Image image)
         {
-            ImageConverter imageConverter = new ImageConverter();
-            return (byte[])imageConverter.ConvertTo(image, typeof(byte[]));
+            MemoryStream memoryStream = new MemoryStream();
+            image.Save(memoryStream, ImageFormat.Jpeg);
+            return memoryStream.ToArray();
         }
 
         public static Image ByteToImage(byte[] bytes)

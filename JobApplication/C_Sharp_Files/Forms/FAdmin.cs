@@ -31,12 +31,29 @@ namespace JobApplication
             InitializeComponent();
         }
 
-        /* Tab 1: Company & ComEmpCatalog */
-
-        private void tabCompany_Click(object sender, EventArgs e)
+        private void FAdmin_Load(object sender, EventArgs e)
         {
             gvCom.DataSource = companyDAO.Load();
             gvComEmp.DataSource = comEmpCatalogDAO.Load();
+        }
+
+
+
+        /* Tab 1: Company & ComEmpCatalog */
+        private void gvCom_Load()
+        {
+            gvCom.DataSource = companyDAO.Load();
+        }
+
+        private void gvComEmp_Load()
+        {
+            gvComEmp.DataSource = comEmpCatalogDAO.Load();
+        }
+
+        private void tabCompany_Click(object sender, EventArgs e)
+        {
+            gvCom_Load();
+            gvComEmp_Load();
         }
 
         private void btnComChooseimage_Click(object sender, EventArgs e)
@@ -47,24 +64,22 @@ namespace JobApplication
         private void btnComInsert_Click(object sender, EventArgs e)
         {
             Company company = new Company(txtComName.Text, picComLogo.Image);
-            Image image = company.Logo;
-            ImageFormat imageFormat = image.RawFormat;
             companyDAO.Insert(company);
-            gvCom.DataSource = companyDAO.Load();
+            gvCom_Load();
         }
 
         private void btnComDelete_Click(object sender, EventArgs e)
         {
             Company company = new Company(txtComName.Text, picComLogo.Image);
             companyDAO.Delete(company);
-            gvCom.DataSource = companyDAO.Load();
+            gvCom_Load();
         }
 
         private void btnComUpdate_Click(object sender, EventArgs e)
         {
             Company company = new Company(txtComName.Text, picComLogo.Image);
             companyDAO.Update(company);
-            gvCom.DataSource = companyDAO.Load();
+            gvCom_Load();
         }
 
         private void gvCom_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -82,5 +97,26 @@ namespace JobApplication
         }
 
         /* Tab 2: JobSeeker & SeekFormCatalog */
+
+        private void gvSeek_Load()
+        {
+            gvSeek.DataSource = jobSeekerDAO.Load();
+        }
+
+        private void gvSeekForm_Load()
+        {
+            gvSeekForm.DataSource = seekFormCatalogDAO.Load();
+        }
+
+        private void tabJobSeeker_Click(object sender, EventArgs e)
+        {
+            gvSeek_Load();
+            gvSeekForm_Load();
+        }
+
+        private void btnSeekChooseimage_Click(object sender, EventArgs e)
+        {
+            picSeekPortraitimage.Image = new Bitmap(ImageUtil.UploadImage(), new Size(70, 70));
+        }
     }
 }
