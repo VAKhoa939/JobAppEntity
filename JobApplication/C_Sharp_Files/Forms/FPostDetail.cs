@@ -48,5 +48,12 @@ namespace JobApplication
                 pbxCompanyAva3.Image = null;
             }
         }
+
+        private void btn_apply_Click(object sender, EventArgs e)
+        {
+            //FApplyForm applyForm = new FApplyForm(); // Create an instance of the FApplyForm
+            //applyForm.Show(); // Show the FApplyForm
+            this.Hide(); // Optionally, hide the current form if needed
+        }
     }
 }

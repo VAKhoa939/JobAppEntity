@@ -49,11 +49,12 @@
             this.btn_subscribe = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.header1 = new JobApplication.UCSeekHeader();
+            this.ucSeekHeader1 = new JobApplication.UCSeekHeader();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCompanyAva)).BeginInit();
             this.panel3.SuspendLayout();
@@ -113,6 +114,7 @@
             this.btn_apply.TabIndex = 4;
             this.btn_apply.Text = "Apply now";
             this.btn_apply.UseVisualStyleBackColor = true;
+            this.btn_apply.Click += new System.EventHandler(this.btn_apply_Click);
             // 
             // pbxCompanyAva
             // 
@@ -247,24 +249,15 @@
             this.panel2.Size = new System.Drawing.Size(693, 391);
             this.panel2.TabIndex = 12;
             // 
-            // pictureBox1
+            // label11
             // 
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(258, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(174, 25);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Company Name";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(493, 100);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 26);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "label11";
             // 
             // label10
             // 
@@ -276,15 +269,24 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Number of Employees:";
             // 
-            // label11
+            // label9
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(493, 100);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 26);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "label11";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(258, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(174, 25);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Company Name";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(55, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // header1
             // 
@@ -293,11 +295,19 @@
             this.header1.Size = new System.Drawing.Size(1920, 120);
             this.header1.TabIndex = 0;
             // 
+            // ucSeekHeader1
+            // 
+            this.ucSeekHeader1.Location = new System.Drawing.Point(0, 0);
+            this.ucSeekHeader1.Name = "ucSeekHeader1";
+            this.ucSeekHeader1.Size = new System.Drawing.Size(1920, 120);
+            this.ucSeekHeader1.TabIndex = 13;
+            // 
             // FPostDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.ucSeekHeader1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btn_subscribe);
@@ -305,7 +315,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.header1);
             this.Name = "FPostDetail";
             this.Text = "ChiTietCongViec";
             this.panel1.ResumeLayout(false);
@@ -349,5 +358,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private UCSeekHeader ucSeekHeader1;
     }
 }
