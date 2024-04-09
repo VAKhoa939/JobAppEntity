@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JobApplication.C_Sharp_Files.Forms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -92,9 +93,8 @@ namespace JobApplication
         private void btnUpload_Click(object sender, EventArgs e)
         {
             // Redirect to FMyPosts form
-            //FMyPosts myPostsForm = new FMyPosts();
-            //myPostsForm.Show();
-
+            FMyPosts myPostsForm = new FMyPosts();
+            myPostsForm.Show();
             // Optionally, hide the current form
             this.Hide();
         }
