@@ -20,6 +20,32 @@ namespace JobApplication
         private List<string> tags;
         private List<ApplyForm> applyForms;
 
+        public Post(int id, string name, decimal salary, string others)
+        {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+            this.others = others;
+            timePosted = DateTime.Now;
+            jobDesc = new List<string>();
+            images = new List<Image>();
+            tags = new List<string>();
+            applyForms = new List<ApplyForm>();
+        }
+
+        public Post(int id, string name, decimal salary, string others, DateTime timePosted)
+        {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+            this.others = others;
+            this.timePosted = timePosted;
+            jobDesc = new List<string>();
+            images = new List<Image>();
+            tags = new List<string>();
+            applyForms = new List<ApplyForm>();
+        }
+
         public Post(int id, string name, decimal salary, string others, DateTime timePosted, List<string> jobDesc, List<Image> images, List<string> tags, List<ApplyForm> applyForms)
         {
             this.id = id;
@@ -87,15 +113,16 @@ namespace JobApplication
             set { applyForms = value; }
         }
 
-        public UCSeekPost GetPostInfo(Company company)
+        public UCSeekPost GetSeekPostOverview(Company company)
         {
             UCSeekPost ucPost = new UCSeekPost();
-            ucPost.lblThoiGianDang.Text = new DateTime(DateTime.Now.Ticks - timePosted.Ticks).ToString("HH:mm");
+            DateTime delta = new DateTime(DateTime.Now.Ticks - timePosted.Ticks);
+            ucPost.lblThoiGianDang.Text = "Posted " + delta.Hour + " hours ago";
             ucPost.lklblTenBaiDang.Text = name;
             ucPost.imgLogo.Image = company.Logo;
             ucPost.lblTenCongTy.Text = company.Name;
             ucPost.lblTienLuong.Text = salary.ToString();
-            ucPost.lblKhac.Text = others;
+            ucPost.lblKhac.Text = others.Replace("\\n", System.Environment.NewLine);
             foreach (string tag in tags)
             {
                 Button btnTag = new Button();

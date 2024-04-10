@@ -62,5 +62,14 @@ namespace JobApplication
             }
             return images;
         }
+
+        public static Image AutoFitPictureBox(PictureBox pictureBox, Image image)
+        {
+            // Resize the image to fit the dimensions of the PictureBox
+            float ratio = Math.Min((float)pictureBox.Width / image.Width, (float)pictureBox.Height / image.Height);
+            int newWidth = (int)(image.Width * ratio);
+            int newHeight = (int)(image.Height * ratio);
+            return new Bitmap(image, newWidth, newHeight);
+        }
     }
 }

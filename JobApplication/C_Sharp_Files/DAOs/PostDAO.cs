@@ -23,12 +23,12 @@ namespace JobApplication
             DataTable dataTable = Load();
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                Post post = null;
-                post.Id = Convert.ToInt32(dataRow[0]);
-                post.Name = dataRow[1].ToString();
-                post.Salary = Convert.ToDecimal(dataRow[2]);
-                post.Others = dataRow[3].ToString();
-                post.TimePosted = (DateTime)dataRow[4];
+                int id = Convert.ToInt32(dataRow[0]);
+                string name = dataRow[1].ToString();
+                decimal salary = Convert.ToDecimal(dataRow[2]);
+                string others = dataRow[3].ToString();
+                DateTime timePosted = (DateTime)dataRow[4];
+                Post post = new Post(id, name, salary, others, timePosted);
                 foreach (string jobDesc in postDescDAO.GetJobDescs(post.Id))
                 {
                     post.JobDescs.Add(jobDesc);
@@ -56,12 +56,11 @@ namespace JobApplication
             DataTable dataTable = dBConn.Load(sqlStr);
 
             DataRow dataRow = dataTable.Rows[0];
-            Post post = null;
-            post.Id = id;
-            post.Name = dataRow[1].ToString();
-            post.Salary = Convert.ToDecimal(dataRow[2]);
-            post.Others = dataRow[3].ToString();
-            post.TimePosted = (DateTime)dataRow[4];
+            string name = dataRow[1].ToString();
+            decimal salary = Convert.ToDecimal(dataRow[2]);
+            string others = dataRow[3].ToString();
+            DateTime timePosted = (DateTime)dataRow[4];
+            Post post = new Post(id, name, salary, others, timePosted);
             foreach (string jobDesc in postDescDAO.GetJobDescs(post.Id))
             {
                 post.JobDescs.Add(jobDesc);

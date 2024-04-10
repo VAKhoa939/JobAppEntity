@@ -10,6 +10,11 @@ namespace JobApplication
     {
         private List<Post> posts;
 
+        public Employer(string userName, string email, string password, string phoneNumber, string fullName) : base(userName, email, password, phoneNumber, fullName)
+        {
+            posts = new List<Post>();
+        }
+
         public Employer(string userName, string email, string password, string phoneNumber, string fullName, List<Post> posts) : base (userName, email, password, phoneNumber, fullName)
         {
             this.posts = posts;

@@ -22,7 +22,7 @@ namespace JobApplication
             if (uploadedImage != null)
             {
                 // Resize the image to fit the PictureBox dimensions
-                uploadedImage = ResizeImageToFitPictureBox(uploadedImage);
+                uploadedImage = ImageUtil.AutoFitPictureBox(GetCurrentPictureBox(), uploadedImage);
 
                 if (currentPictureBoxIndex < 3) // Ensure we do not exceed the number of PictureBox controls
                 {
@@ -54,23 +54,14 @@ namespace JobApplication
             switch (currentPictureBoxIndex)
             {
                 case 0:
+                default:
+                    currentPictureBoxIndex = 0;
                     return pbxJobImages1;
                 case 1:
                     return pbxJobImages2;
                 case 2:
                     return pbxJobImages3;
-                default:
-                    throw new InvalidOperationException("Invalid PictureBox index.");
             }
-        }
-
-        private Image ResizeImageToFitPictureBox(Image image)
-        {
-            // Resize the image to fit the dimensions of the PictureBox
-            float ratio = Math.Min((float)GetCurrentPictureBox().Width / image.Width, (float)GetCurrentPictureBox().Height / image.Height);
-            int newWidth = (int)(image.Width * ratio);
-            int newHeight = (int)(image.Height * ratio);
-            return new Bitmap(image, newWidth, newHeight);
         }
 
         private void btnReset_Click(object sender, EventArgs e)

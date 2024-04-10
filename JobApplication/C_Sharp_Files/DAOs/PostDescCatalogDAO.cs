@@ -7,17 +7,8 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class PostDescCatalogDAO
+    class PostDescCatalogDAO : AnyDAO
     {
-        private DBConnection dBConn = new DBConnection();
-        private string sqlStr = "";
-
-        public DataTable Load()
-        {
-            sqlStr = string.Format("SELECT * FROM PostDescCatalog");
-            return dBConn.Load(sqlStr);
-        }
-
         public List<string> GetJobDescs(int postId)
         {
             sqlStr = string.Format("SELECT * FROM PostDescCatalog WHERE Postid = '{0}'", postId);
@@ -46,6 +37,12 @@ namespace JobApplication
         {
             sqlStr = string.Format("DELETE FROM PostDescCatalog WHERE Jobdesc = '{0}'", jobDesc);
             dBConn.Execute(sqlStr, "Delete");
+        }
+
+        public void Update(int postId, string jobDesc)
+        {
+            sqlStr = string.Format("UPDATE PostDescCatalog SET Jobdesc = '{0}' WHERE Postid = '{1}')", jobDesc, postId);
+            dBConn.Execute(sqlStr, "Update");
         }
     }
 }
