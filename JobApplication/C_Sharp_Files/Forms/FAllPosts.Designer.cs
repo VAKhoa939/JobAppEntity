@@ -66,16 +66,17 @@
             this.header1.Size = new System.Drawing.Size(1920, 120);
             this.header1.TabIndex = 0;
             // 
-            // FTinTuyenDung
+            // FAllPosts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.flpKetQua);
             this.Controls.Add(this.lblSoLuongKQ);
             this.Controls.Add(this.thanhTimKiem1);
             this.Controls.Add(this.header1);
-            this.Name = "FTinTuyenDung";
+            this.Name = "FAllPosts";
             this.Load += new System.EventHandler(this.TinTuyenDung_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
