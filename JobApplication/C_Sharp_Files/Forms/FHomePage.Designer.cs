@@ -46,14 +46,14 @@
             this.thanhTimKiem1.Size = new System.Drawing.Size(1920, 60);
             this.thanhTimKiem1.TabIndex = 1;
             // 
-            // TrangChu
+            // FHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.thanhTimKiem1);
             this.Controls.Add(this.header1);
-            this.Name = "TrangChu";
+            this.Name = "FHomePage";
             this.Text = "TrangChu";
             this.ResumeLayout(false);
 

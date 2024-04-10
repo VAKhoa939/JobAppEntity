@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.signOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.myJobsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.profileCVsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.allJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.createAPostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.createAPostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -47,27 +45,13 @@
             // signOutToolStripMenuItem1
             // 
             this.signOutToolStripMenuItem1.Name = "signOutToolStripMenuItem1";
-            this.signOutToolStripMenuItem1.Size = new System.Drawing.Size(268, 42);
+            this.signOutToolStripMenuItem1.Size = new System.Drawing.Size(246, 42);
             this.signOutToolStripMenuItem1.Text = "Sign Out";
-            // 
-            // myJobsToolStripMenuItem1
-            // 
-            this.myJobsToolStripMenuItem1.Name = "myJobsToolStripMenuItem1";
-            this.myJobsToolStripMenuItem1.Size = new System.Drawing.Size(268, 42);
-            this.myJobsToolStripMenuItem1.Text = "My Jobs";
-            // 
-            // profileCVsToolStripMenuItem
-            // 
-            this.profileCVsToolStripMenuItem.Name = "profileCVsToolStripMenuItem";
-            this.profileCVsToolStripMenuItem.Size = new System.Drawing.Size(268, 42);
-            this.profileCVsToolStripMenuItem.Text = "Profile & CVs";
             // 
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.profileCVsToolStripMenuItem,
-            this.myJobsToolStripMenuItem1,
             this.settingsToolStripMenuItem1,
             this.signOutToolStripMenuItem1});
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
@@ -77,8 +61,8 @@
             // settingsToolStripMenuItem1
             // 
             this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(268, 42);
-            this.settingsToolStripMenuItem1.Text = "Settings";
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(246, 42);
+            this.settingsToolStripMenuItem1.Text = "User\'s Info";
             // 
             // allJobsToolStripMenuItem
             // 
@@ -99,6 +83,12 @@
             this.menuStrip1.Size = new System.Drawing.Size(1525, 45);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // createAPostToolStripMenuItem
+            // 
+            this.createAPostToolStripMenuItem.Name = "createAPostToolStripMenuItem";
+            this.createAPostToolStripMenuItem.Size = new System.Drawing.Size(200, 41);
+            this.createAPostToolStripMenuItem.Text = "Create a post";
             // 
             // panel2
             // 
@@ -127,12 +117,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TimViecLam.vn";
             // 
-            // createAPostToolStripMenuItem
-            // 
-            this.createAPostToolStripMenuItem.Name = "createAPostToolStripMenuItem";
-            this.createAPostToolStripMenuItem.Size = new System.Drawing.Size(200, 41);
-            this.createAPostToolStripMenuItem.Text = "Create a post";
-            // 
             // UCEmpHeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -153,8 +137,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem myJobsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem profileCVsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem allJobsToolStripMenuItem;
