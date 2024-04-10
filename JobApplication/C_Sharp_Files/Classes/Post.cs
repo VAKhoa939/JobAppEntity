@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class Post
+    public class Post
     {
         private int id;
         private string name;
@@ -115,7 +115,7 @@ namespace JobApplication
 
         public UCSeekPost GetSeekPostOverview(Company company)
         {
-            UCSeekPost ucPost = new UCSeekPost();
+            UCSeekPost ucPost = new UCSeekPost(this, company);
             DateTime delta = new DateTime(DateTime.Now.Ticks - timePosted.Ticks);
             ucPost.lblThoiGianDang.Text = "Posted " + delta.Hour + " hours ago";
             ucPost.lklblTenBaiDang.Text = name;

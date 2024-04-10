@@ -12,18 +12,33 @@ namespace JobApplication
 {
     public partial class UCSeekPost : UserControl
     {
+        private Post post;
+        private Company company;
+        private JobSeeker jobSeeker;
+
         public UCSeekPost()
         {
             InitializeComponent();
         }
 
+        public UCSeekPost(Post post, Company company)
+        {
+            InitializeComponent();
+            this.post = post;
+            this.company = company;
+        }
+
+        public JobSeeker JobSeeker 
+        { 
+            get { return jobSeeker; } 
+            set { jobSeeker = value; } 
+        }
+
         public void lklblTenBaiDang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ((Form)this.TopLevelControl).Close();
-            FFormManagement fFormManagement = new FFormManagement();
-            fFormManagement.Show();
-            //FPostDetail fPostDetail = new FPostDetail();
-            //fPostDetail.Show();
+            FPostDetail fPostDetail = new FPostDetail();
+            fPostDetail.Show();
         }
     }
 }

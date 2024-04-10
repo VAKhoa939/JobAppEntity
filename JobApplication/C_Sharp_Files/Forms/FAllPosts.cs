@@ -13,11 +13,19 @@ namespace JobApplication
     public partial class FAllPosts : Form
     {
         private CompanyDAO companyDAO = new CompanyDAO();
+        private JobSeeker jobSeeker;
 
         public FAllPosts()
         {
             InitializeComponent();
         }
+
+        public FAllPosts(JobSeeker jobSeeker)
+        {
+            InitializeComponent();
+            this.jobSeeker = jobSeeker;
+        }
+
 
         private void TinTuyenDung_Load(object sender, EventArgs e)
         {

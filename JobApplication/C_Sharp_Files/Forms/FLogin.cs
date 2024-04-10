@@ -41,7 +41,7 @@ namespace JobApplication
                     if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
                     {
                         this.Hide();
-                        FAllPosts fAllPosts = new FAllPosts();
+                        FAllPosts fAllPosts = new FAllPosts(js);
                         fAllPosts.Show();
                         return;
                     }

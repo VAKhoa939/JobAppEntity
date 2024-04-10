@@ -5,12 +5,13 @@ namespace JobApplication
 {
     public partial class FPostDetail : Form
     {
+        int intImgNum = 0;
+
         public FPostDetail()
         {
             InitializeComponent();
         }
 
-        int intImgNum = 0;
 
         private void tmrChangeImage_Tick(object sender, EventArgs e)
         {
