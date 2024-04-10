@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class Post
+    public class Post
     {
         private int id;
         private string name;
@@ -111,27 +111,6 @@ namespace JobApplication
         { 
             get { return applyForms; } 
             set { applyForms = value; }
-        }
-
-        public UCSeekPost GetSeekPostOverview(Company company)
-        {
-            UCSeekPost ucPost = new UCSeekPost();
-            DateTime delta = new DateTime(DateTime.Now.Ticks - timePosted.Ticks);
-            ucPost.lblThoiGianDang.Text = "Posted " + delta.Hour + " hours ago";
-            ucPost.lklblTenBaiDang.Text = name;
-            ucPost.imgLogo.Image = company.Logo;
-            ucPost.lblTenCongTy.Text = company.Name;
-            ucPost.lblTienLuong.Text = salary.ToString();
-            ucPost.lblKhac.Text = others.Replace("\\n", System.Environment.NewLine);
-            foreach (string tag in tags)
-            {
-                Button btnTag = new Button();
-                btnTag.Text = tag;
-                btnTag.Size = new Size(100, 32);
-                btnTag.Font = new Font("Times New Roman", 11);
-                ucPost.flpTags.Controls.Add(btnTag);
-            }
-            return ucPost;
         }
     }
 }

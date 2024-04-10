@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class Employer : User
+    public class Employer : User
     {
         private List<Post> posts;
 

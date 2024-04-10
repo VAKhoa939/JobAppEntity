@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class JobSeeker : User
+    public class JobSeeker : User
     {
         private string address;
         private DateTime birthDate;

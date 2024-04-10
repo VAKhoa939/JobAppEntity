@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class ApplyForm
+    public class ApplyForm
     {
         private string id;
         private int seekFormId;

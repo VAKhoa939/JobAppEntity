@@ -1,6 +1,6 @@
 ﻿namespace JobApplication
 {
-    partial class UCSeekPost
+    partial class UCEmpPost
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblThoiGianDang = new System.Windows.Forms.Label();
-            this.lklblTenBaiDang = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKhac = new System.Windows.Forms.Label();
             this.flpTags = new System.Windows.Forms.FlowLayoutPanel();
@@ -37,32 +35,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTenCongTy = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.lklblTenBaiDang = new System.Windows.Forms.LinkLabel();
+            this.lblThoiGianDang = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblThoiGianDang
-            // 
-            this.lblThoiGianDang.AutoSize = true;
-            this.lblThoiGianDang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThoiGianDang.Location = new System.Drawing.Point(32, 27);
-            this.lblThoiGianDang.Name = "lblThoiGianDang";
-            this.lblThoiGianDang.Size = new System.Drawing.Size(51, 20);
-            this.lblThoiGianDang.TabIndex = 0;
-            this.lblThoiGianDang.Text = "label1";
-            // 
-            // lklblTenBaiDang
-            // 
-            this.lklblTenBaiDang.AutoSize = true;
-            this.lklblTenBaiDang.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lklblTenBaiDang.Location = new System.Drawing.Point(29, 62);
-            this.lklblTenBaiDang.Name = "lklblTenBaiDang";
-            this.lklblTenBaiDang.Size = new System.Drawing.Size(105, 25);
-            this.lklblTenBaiDang.TabIndex = 1;
-            this.lklblTenBaiDang.TabStop = true;
-            this.lklblTenBaiDang.Text = "linkLabel1";
-            this.lklblTenBaiDang.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblTenBaiDang_LinkClicked);
             // 
             // panel1
             // 
@@ -75,7 +53,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(502, 380);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 3;
             // 
             // lblKhac
             // 
@@ -131,13 +109,33 @@
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
-            // UCSeekPost
+            // lklblTenBaiDang
+            // 
+            this.lklblTenBaiDang.AutoSize = true;
+            this.lklblTenBaiDang.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lklblTenBaiDang.Location = new System.Drawing.Point(29, 62);
+            this.lklblTenBaiDang.Name = "lklblTenBaiDang";
+            this.lklblTenBaiDang.Size = new System.Drawing.Size(105, 25);
+            this.lklblTenBaiDang.TabIndex = 1;
+            this.lklblTenBaiDang.TabStop = true;
+            this.lklblTenBaiDang.Text = "linkLabel1";
+            // 
+            // lblThoiGianDang
+            // 
+            this.lblThoiGianDang.AutoSize = true;
+            this.lblThoiGianDang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGianDang.Location = new System.Drawing.Point(32, 28);
+            this.lblThoiGianDang.Name = "lblThoiGianDang";
+            this.lblThoiGianDang.Size = new System.Drawing.Size(51, 20);
+            this.lblThoiGianDang.TabIndex = 6;
+            this.lblThoiGianDang.Text = "label1";
+            // 
+            // UCEmpPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Controls.Add(this.panel1);
-            this.Name = "UCSeekPost";
+            this.Name = "UCEmpPost";
             this.Size = new System.Drawing.Size(520, 400);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -149,14 +147,15 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Label lblThoiGianDang;
-        public System.Windows.Forms.LinkLabel lklblTenBaiDang;
-        public System.Windows.Forms.PictureBox imgLogo;
+        public System.Windows.Forms.Label lblKhac;
         public System.Windows.Forms.FlowLayoutPanel flpTags;
         public System.Windows.Forms.Label lblTienLuong;
+        private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label lblTenCongTy;
-        public System.Windows.Forms.Label lblKhac;
+        public System.Windows.Forms.PictureBox imgLogo;
+        public System.Windows.Forms.LinkLabel lklblTenBaiDang;
+        public System.Windows.Forms.Label lblThoiGianDang;
     }
 }
