@@ -46,6 +46,12 @@ namespace JobApplication
             }
         }
 
+        public JobSeeker JobSeeker 
+        { 
+            get { return jobSeeker; } 
+            set { jobSeeker = value; } 
+        }
+
         public void lklblTenBaiDang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ((Form)this.TopLevelControl).Close();

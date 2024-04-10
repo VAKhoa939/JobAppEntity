@@ -142,42 +142,42 @@
             this.btnPostInsert = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabApplyForm = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
-            this.gvPostDesc = new System.Windows.Forms.DataGridView();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.txtPostDescJobdesc = new System.Windows.Forms.TextBox();
-            this.txtPostDescPostid = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.gvPostImg = new System.Windows.Forms.DataGridView();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label42 = new System.Windows.Forms.Label();
-            this.txtPostImgPostid = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
             this.gvPostTag = new System.Windows.Forms.DataGridView();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.btnPostTagUpdate = new System.Windows.Forms.Button();
+            this.btnPostTagDelete = new System.Windows.Forms.Button();
+            this.btnPostTagInsert = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label45 = new System.Windows.Forms.Label();
             this.txtPostTagTag = new System.Windows.Forms.TextBox();
             this.txtPostTagPostid = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.picPostImgImage = new System.Windows.Forms.PictureBox();
-            this.btnPostImgChooseimage = new System.Windows.Forms.Button();
-            this.btnPostDescUpdate = new System.Windows.Forms.Button();
-            this.btnPostDescDelete = new System.Windows.Forms.Button();
-            this.btnPostDescInsert = new System.Windows.Forms.Button();
-            this.btnPostTagUpdate = new System.Windows.Forms.Button();
-            this.btnPostTagDelete = new System.Windows.Forms.Button();
-            this.btnPostTagInsert = new System.Windows.Forms.Button();
+            this.gvPostImg = new System.Windows.Forms.DataGridView();
+            this.panel19 = new System.Windows.Forms.Panel();
             this.btnPostImgUpdate = new System.Windows.Forms.Button();
             this.btnPostImgDelete = new System.Windows.Forms.Button();
             this.btnPostImgInsert = new System.Windows.Forms.Button();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.picPostImgImage = new System.Windows.Forms.PictureBox();
+            this.btnPostImgChooseimage = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtPostImgPostid = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.gvPostDesc = new System.Windows.Forms.DataGridView();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.btnPostDescUpdate = new System.Windows.Forms.Button();
+            this.btnPostDescDelete = new System.Windows.Forms.Button();
+            this.btnPostDescInsert = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtPostDescJobdesc = new System.Windows.Forms.TextBox();
+            this.txtPostDescPostid = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.tabApplyForm = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabCompany.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvComEmp)).BeginInit();
@@ -210,16 +210,16 @@
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPostDesc)).BeginInit();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPostImg)).BeginInit();
-            this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvPostTag)).BeginInit();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPostImg)).BeginInit();
+            this.panel19.SuspendLayout();
+            this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPostImgImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPostDesc)).BeginInit();
+            this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1337,174 +1337,6 @@
             this.tabPage1.Text = "Post (2nd tab)";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabApplyForm
-            // 
-            this.tabApplyForm.Location = new System.Drawing.Point(4, 34);
-            this.tabApplyForm.Name = "tabApplyForm";
-            this.tabApplyForm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabApplyForm.Size = new System.Drawing.Size(1712, 842);
-            this.tabApplyForm.TabIndex = 4;
-            this.tabApplyForm.Text = "Apply Form";
-            this.tabApplyForm.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(806, 24);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(411, 45);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "Database Management";
-            // 
-            // gvPostDesc
-            // 
-            this.gvPostDesc.AllowUserToOrderColumns = true;
-            this.gvPostDesc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvPostDesc.Location = new System.Drawing.Point(724, 3);
-            this.gvPostDesc.Name = "gvPostDesc";
-            this.gvPostDesc.RowHeadersWidth = 51;
-            this.gvPostDesc.RowTemplate.Height = 24;
-            this.gvPostDesc.Size = new System.Drawing.Size(979, 251);
-            this.gvPostDesc.TabIndex = 17;
-            this.gvPostDesc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPostDesc_CellContentClick);
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.btnPostDescUpdate);
-            this.panel17.Controls.Add(this.btnPostDescDelete);
-            this.panel17.Controls.Add(this.btnPostDescInsert);
-            this.panel17.Controls.Add(this.panel18);
-            this.panel17.Controls.Add(this.label41);
-            this.panel17.Location = new System.Drawing.Point(3, 3);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(715, 251);
-            this.panel17.TabIndex = 16;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.label39);
-            this.panel18.Controls.Add(this.txtPostDescJobdesc);
-            this.panel18.Controls.Add(this.txtPostDescPostid);
-            this.panel18.Controls.Add(this.label40);
-            this.panel18.Location = new System.Drawing.Point(73, 54);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(538, 101);
-            this.panel18.TabIndex = 5;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(3, 10);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(78, 25);
-            this.label39.TabIndex = 1;
-            this.label39.Text = "Post ID";
-            // 
-            // txtPostDescJobdesc
-            // 
-            this.txtPostDescJobdesc.Location = new System.Drawing.Point(278, 56);
-            this.txtPostDescJobdesc.Name = "txtPostDescJobdesc";
-            this.txtPostDescJobdesc.Size = new System.Drawing.Size(233, 33);
-            this.txtPostDescJobdesc.TabIndex = 4;
-            // 
-            // txtPostDescPostid
-            // 
-            this.txtPostDescPostid.Location = new System.Drawing.Point(278, 7);
-            this.txtPostDescPostid.Name = "txtPostDescPostid";
-            this.txtPostDescPostid.Size = new System.Drawing.Size(233, 33);
-            this.txtPostDescPostid.TabIndex = 3;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(3, 59);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(257, 25);
-            this.label40.TabIndex = 2;
-            this.label40.Text = "Job Description\'s Paragraph";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(215, 17);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(279, 34);
-            this.label41.TabIndex = 0;
-            this.label41.Text = "PostDescCatalog Data";
-            // 
-            // gvPostImg
-            // 
-            this.gvPostImg.AllowUserToOrderColumns = true;
-            this.gvPostImg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvPostImg.Location = new System.Drawing.Point(724, 588);
-            this.gvPostImg.Name = "gvPostImg";
-            this.gvPostImg.RowHeadersWidth = 51;
-            this.gvPostImg.RowTemplate.Height = 24;
-            this.gvPostImg.Size = new System.Drawing.Size(979, 251);
-            this.gvPostImg.TabIndex = 19;
-            this.gvPostImg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPostImg_CellContentClick);
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.btnPostImgUpdate);
-            this.panel19.Controls.Add(this.btnPostImgDelete);
-            this.panel19.Controls.Add(this.btnPostImgInsert);
-            this.panel19.Controls.Add(this.panel20);
-            this.panel19.Controls.Add(this.label44);
-            this.panel19.Location = new System.Drawing.Point(3, 588);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(715, 251);
-            this.panel19.TabIndex = 18;
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.picPostImgImage);
-            this.panel20.Controls.Add(this.btnPostImgChooseimage);
-            this.panel20.Controls.Add(this.label42);
-            this.panel20.Controls.Add(this.txtPostImgPostid);
-            this.panel20.Controls.Add(this.label43);
-            this.panel20.Location = new System.Drawing.Point(113, 54);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(498, 128);
-            this.panel20.TabIndex = 5;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(3, 10);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(78, 25);
-            this.label42.TabIndex = 1;
-            this.label42.Text = "Post ID";
-            // 
-            // txtPostImgPostid
-            // 
-            this.txtPostImgPostid.Location = new System.Drawing.Point(238, 7);
-            this.txtPostImgPostid.Name = "txtPostImgPostid";
-            this.txtPostImgPostid.Size = new System.Drawing.Size(233, 33);
-            this.txtPostImgPostid.TabIndex = 3;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(3, 75);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(114, 25);
-            this.label43.TabIndex = 2;
-            this.label43.Text = "Job\'s Image";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(228, 17);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(266, 34);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "PostImgCatalog Data";
-            // 
             // gvPostTag
             // 
             this.gvPostTag.AllowUserToOrderColumns = true;
@@ -1528,6 +1360,36 @@
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(715, 251);
             this.panel21.TabIndex = 20;
+            // 
+            // btnPostTagUpdate
+            // 
+            this.btnPostTagUpdate.Location = new System.Drawing.Point(587, 202);
+            this.btnPostTagUpdate.Name = "btnPostTagUpdate";
+            this.btnPostTagUpdate.Size = new System.Drawing.Size(125, 46);
+            this.btnPostTagUpdate.TabIndex = 14;
+            this.btnPostTagUpdate.Text = "Update";
+            this.btnPostTagUpdate.UseVisualStyleBackColor = true;
+            this.btnPostTagUpdate.Click += new System.EventHandler(this.btnPostTagUpdate_Click);
+            // 
+            // btnPostTagDelete
+            // 
+            this.btnPostTagDelete.Location = new System.Drawing.Point(296, 202);
+            this.btnPostTagDelete.Name = "btnPostTagDelete";
+            this.btnPostTagDelete.Size = new System.Drawing.Size(125, 46);
+            this.btnPostTagDelete.TabIndex = 13;
+            this.btnPostTagDelete.Text = "Delete";
+            this.btnPostTagDelete.UseVisualStyleBackColor = true;
+            this.btnPostTagDelete.Click += new System.EventHandler(this.btnPostTagDelete_Click);
+            // 
+            // btnPostTagInsert
+            // 
+            this.btnPostTagInsert.Location = new System.Drawing.Point(6, 202);
+            this.btnPostTagInsert.Name = "btnPostTagInsert";
+            this.btnPostTagInsert.Size = new System.Drawing.Size(125, 46);
+            this.btnPostTagInsert.TabIndex = 12;
+            this.btnPostTagInsert.Text = "Insert";
+            this.btnPostTagInsert.UseVisualStyleBackColor = true;
+            this.btnPostTagInsert.Click += new System.EventHandler(this.btnPostTagInsert_Click);
             // 
             // panel22
             // 
@@ -1582,84 +1444,29 @@
             this.label47.TabIndex = 0;
             this.label47.Text = "PostTagCatalog Data";
             // 
-            // picPostImgImage
+            // gvPostImg
             // 
-            this.picPostImgImage.Location = new System.Drawing.Point(238, 55);
-            this.picPostImgImage.Name = "picPostImgImage";
-            this.picPostImgImage.Size = new System.Drawing.Size(70, 70);
-            this.picPostImgImage.TabIndex = 6;
-            this.picPostImgImage.TabStop = false;
+            this.gvPostImg.AllowUserToOrderColumns = true;
+            this.gvPostImg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvPostImg.Location = new System.Drawing.Point(724, 588);
+            this.gvPostImg.Name = "gvPostImg";
+            this.gvPostImg.RowHeadersWidth = 51;
+            this.gvPostImg.RowTemplate.Height = 24;
+            this.gvPostImg.Size = new System.Drawing.Size(979, 251);
+            this.gvPostImg.TabIndex = 19;
+            this.gvPostImg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPostImg_CellContentClick);
             // 
-            // btnPostImgChooseimage
+            // panel19
             // 
-            this.btnPostImgChooseimage.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPostImgChooseimage.Location = new System.Drawing.Point(335, 70);
-            this.btnPostImgChooseimage.Name = "btnPostImgChooseimage";
-            this.btnPostImgChooseimage.Size = new System.Drawing.Size(136, 41);
-            this.btnPostImgChooseimage.TabIndex = 7;
-            this.btnPostImgChooseimage.Text = "Choose Image";
-            this.btnPostImgChooseimage.UseVisualStyleBackColor = true;
-            this.btnPostImgChooseimage.Click += new System.EventHandler(this.btnPostImgChooseimage_Click);
-            // 
-            // btnPostDescUpdate
-            // 
-            this.btnPostDescUpdate.Location = new System.Drawing.Point(587, 202);
-            this.btnPostDescUpdate.Name = "btnPostDescUpdate";
-            this.btnPostDescUpdate.Size = new System.Drawing.Size(125, 46);
-            this.btnPostDescUpdate.TabIndex = 11;
-            this.btnPostDescUpdate.Text = "Update";
-            this.btnPostDescUpdate.UseVisualStyleBackColor = true;
-            this.btnPostDescUpdate.Click += new System.EventHandler(this.btnPostDescUpdate_Click);
-            // 
-            // btnPostDescDelete
-            // 
-            this.btnPostDescDelete.Location = new System.Drawing.Point(296, 202);
-            this.btnPostDescDelete.Name = "btnPostDescDelete";
-            this.btnPostDescDelete.Size = new System.Drawing.Size(125, 46);
-            this.btnPostDescDelete.TabIndex = 10;
-            this.btnPostDescDelete.Text = "Delete";
-            this.btnPostDescDelete.UseVisualStyleBackColor = true;
-            this.btnPostDescDelete.Click += new System.EventHandler(this.btnPostDescDelete_Click);
-            // 
-            // btnPostDescInsert
-            // 
-            this.btnPostDescInsert.Location = new System.Drawing.Point(6, 202);
-            this.btnPostDescInsert.Name = "btnPostDescInsert";
-            this.btnPostDescInsert.Size = new System.Drawing.Size(125, 46);
-            this.btnPostDescInsert.TabIndex = 9;
-            this.btnPostDescInsert.Text = "Insert";
-            this.btnPostDescInsert.UseVisualStyleBackColor = true;
-            this.btnPostDescInsert.Click += new System.EventHandler(this.btnPostDescInsert_Click);
-            // 
-            // btnPostTagUpdate
-            // 
-            this.btnPostTagUpdate.Location = new System.Drawing.Point(587, 202);
-            this.btnPostTagUpdate.Name = "btnPostTagUpdate";
-            this.btnPostTagUpdate.Size = new System.Drawing.Size(125, 46);
-            this.btnPostTagUpdate.TabIndex = 14;
-            this.btnPostTagUpdate.Text = "Update";
-            this.btnPostTagUpdate.UseVisualStyleBackColor = true;
-            this.btnPostTagUpdate.Click += new System.EventHandler(this.btnPostTagUpdate_Click);
-            // 
-            // btnPostTagDelete
-            // 
-            this.btnPostTagDelete.Location = new System.Drawing.Point(296, 202);
-            this.btnPostTagDelete.Name = "btnPostTagDelete";
-            this.btnPostTagDelete.Size = new System.Drawing.Size(125, 46);
-            this.btnPostTagDelete.TabIndex = 13;
-            this.btnPostTagDelete.Text = "Delete";
-            this.btnPostTagDelete.UseVisualStyleBackColor = true;
-            this.btnPostTagDelete.Click += new System.EventHandler(this.btnPostTagDelete_Click);
-            // 
-            // btnPostTagInsert
-            // 
-            this.btnPostTagInsert.Location = new System.Drawing.Point(6, 202);
-            this.btnPostTagInsert.Name = "btnPostTagInsert";
-            this.btnPostTagInsert.Size = new System.Drawing.Size(125, 46);
-            this.btnPostTagInsert.TabIndex = 12;
-            this.btnPostTagInsert.Text = "Insert";
-            this.btnPostTagInsert.UseVisualStyleBackColor = true;
-            this.btnPostTagInsert.Click += new System.EventHandler(this.btnPostTagInsert_Click);
+            this.panel19.Controls.Add(this.btnPostImgUpdate);
+            this.panel19.Controls.Add(this.btnPostImgDelete);
+            this.panel19.Controls.Add(this.btnPostImgInsert);
+            this.panel19.Controls.Add(this.panel20);
+            this.panel19.Controls.Add(this.label44);
+            this.panel19.Location = new System.Drawing.Point(3, 588);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(715, 251);
+            this.panel19.TabIndex = 18;
             // 
             // btnPostImgUpdate
             // 
@@ -1691,10 +1498,204 @@
             this.btnPostImgInsert.UseVisualStyleBackColor = true;
             this.btnPostImgInsert.Click += new System.EventHandler(this.btnPostImgInsert_Click);
             // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.picPostImgImage);
+            this.panel20.Controls.Add(this.btnPostImgChooseimage);
+            this.panel20.Controls.Add(this.label42);
+            this.panel20.Controls.Add(this.txtPostImgPostid);
+            this.panel20.Controls.Add(this.label43);
+            this.panel20.Location = new System.Drawing.Point(113, 54);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(498, 128);
+            this.panel20.TabIndex = 5;
+            // 
+            // picPostImgImage
+            // 
+            this.picPostImgImage.Location = new System.Drawing.Point(238, 55);
+            this.picPostImgImage.Name = "picPostImgImage";
+            this.picPostImgImage.Size = new System.Drawing.Size(70, 70);
+            this.picPostImgImage.TabIndex = 6;
+            this.picPostImgImage.TabStop = false;
+            // 
+            // btnPostImgChooseimage
+            // 
+            this.btnPostImgChooseimage.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPostImgChooseimage.Location = new System.Drawing.Point(335, 70);
+            this.btnPostImgChooseimage.Name = "btnPostImgChooseimage";
+            this.btnPostImgChooseimage.Size = new System.Drawing.Size(136, 41);
+            this.btnPostImgChooseimage.TabIndex = 7;
+            this.btnPostImgChooseimage.Text = "Choose Image";
+            this.btnPostImgChooseimage.UseVisualStyleBackColor = true;
+            this.btnPostImgChooseimage.Click += new System.EventHandler(this.btnPostImgChooseimage_Click);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(3, 10);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(78, 25);
+            this.label42.TabIndex = 1;
+            this.label42.Text = "Post ID";
+            // 
+            // txtPostImgPostid
+            // 
+            this.txtPostImgPostid.Location = new System.Drawing.Point(238, 7);
+            this.txtPostImgPostid.Name = "txtPostImgPostid";
+            this.txtPostImgPostid.Size = new System.Drawing.Size(233, 33);
+            this.txtPostImgPostid.TabIndex = 3;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(3, 75);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(114, 25);
+            this.label43.TabIndex = 2;
+            this.label43.Text = "Job\'s Image";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(228, 17);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(266, 34);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "PostImgCatalog Data";
+            // 
+            // gvPostDesc
+            // 
+            this.gvPostDesc.AllowUserToOrderColumns = true;
+            this.gvPostDesc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvPostDesc.Location = new System.Drawing.Point(724, 3);
+            this.gvPostDesc.Name = "gvPostDesc";
+            this.gvPostDesc.RowHeadersWidth = 51;
+            this.gvPostDesc.RowTemplate.Height = 24;
+            this.gvPostDesc.Size = new System.Drawing.Size(979, 251);
+            this.gvPostDesc.TabIndex = 17;
+            this.gvPostDesc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPostDesc_CellContentClick);
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.btnPostDescUpdate);
+            this.panel17.Controls.Add(this.btnPostDescDelete);
+            this.panel17.Controls.Add(this.btnPostDescInsert);
+            this.panel17.Controls.Add(this.panel18);
+            this.panel17.Controls.Add(this.label41);
+            this.panel17.Location = new System.Drawing.Point(3, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(715, 251);
+            this.panel17.TabIndex = 16;
+            // 
+            // btnPostDescUpdate
+            // 
+            this.btnPostDescUpdate.Location = new System.Drawing.Point(587, 202);
+            this.btnPostDescUpdate.Name = "btnPostDescUpdate";
+            this.btnPostDescUpdate.Size = new System.Drawing.Size(125, 46);
+            this.btnPostDescUpdate.TabIndex = 11;
+            this.btnPostDescUpdate.Text = "Update";
+            this.btnPostDescUpdate.UseVisualStyleBackColor = true;
+            this.btnPostDescUpdate.Click += new System.EventHandler(this.btnPostDescUpdate_Click);
+            // 
+            // btnPostDescDelete
+            // 
+            this.btnPostDescDelete.Location = new System.Drawing.Point(296, 202);
+            this.btnPostDescDelete.Name = "btnPostDescDelete";
+            this.btnPostDescDelete.Size = new System.Drawing.Size(125, 46);
+            this.btnPostDescDelete.TabIndex = 10;
+            this.btnPostDescDelete.Text = "Delete";
+            this.btnPostDescDelete.UseVisualStyleBackColor = true;
+            this.btnPostDescDelete.Click += new System.EventHandler(this.btnPostDescDelete_Click);
+            // 
+            // btnPostDescInsert
+            // 
+            this.btnPostDescInsert.Location = new System.Drawing.Point(6, 202);
+            this.btnPostDescInsert.Name = "btnPostDescInsert";
+            this.btnPostDescInsert.Size = new System.Drawing.Size(125, 46);
+            this.btnPostDescInsert.TabIndex = 9;
+            this.btnPostDescInsert.Text = "Insert";
+            this.btnPostDescInsert.UseVisualStyleBackColor = true;
+            this.btnPostDescInsert.Click += new System.EventHandler(this.btnPostDescInsert_Click);
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.label39);
+            this.panel18.Controls.Add(this.txtPostDescJobdesc);
+            this.panel18.Controls.Add(this.txtPostDescPostid);
+            this.panel18.Controls.Add(this.label40);
+            this.panel18.Location = new System.Drawing.Point(73, 54);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(538, 101);
+            this.panel18.TabIndex = 5;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(3, 10);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(78, 25);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "Post ID";
+            // 
+            // txtPostDescJobdesc
+            // 
+            this.txtPostDescJobdesc.Location = new System.Drawing.Point(278, 56);
+            this.txtPostDescJobdesc.Name = "txtPostDescJobdesc";
+            this.txtPostDescJobdesc.Size = new System.Drawing.Size(233, 33);
+            this.txtPostDescJobdesc.TabIndex = 4;
+            // 
+            // txtPostDescPostid
+            // 
+            this.txtPostDescPostid.Location = new System.Drawing.Point(278, 7);
+            this.txtPostDescPostid.Name = "txtPostDescPostid";
+            this.txtPostDescPostid.Size = new System.Drawing.Size(233, 33);
+            this.txtPostDescPostid.TabIndex = 3;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(3, 59);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(257, 25);
+            this.label40.TabIndex = 2;
+            this.label40.Text = "Job Description\'s Paragraph";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(215, 17);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(279, 34);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "PostDescCatalog Data";
+            // 
+            // tabApplyForm
+            // 
+            this.tabApplyForm.Location = new System.Drawing.Point(4, 34);
+            this.tabApplyForm.Name = "tabApplyForm";
+            this.tabApplyForm.Padding = new System.Windows.Forms.Padding(3);
+            this.tabApplyForm.Size = new System.Drawing.Size(1712, 842);
+            this.tabApplyForm.TabIndex = 4;
+            this.tabApplyForm.Text = "Apply Form";
+            this.tabApplyForm.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(806, 24);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(411, 45);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Database Management";
+            // 
             // FAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.tabControl1);
@@ -1749,22 +1750,22 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gvPostDesc)).EndInit();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPostImg)).EndInit();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvPostTag)).EndInit();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPostImg)).EndInit();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPostImgImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPostDesc)).EndInit();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

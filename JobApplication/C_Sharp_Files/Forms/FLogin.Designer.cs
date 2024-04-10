@@ -31,6 +31,8 @@
             this.tbLogin = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.rdoEmployerLogin = new System.Windows.Forms.RadioButton();
+            this.rdoJobSeekerLogin = new System.Windows.Forms.RadioButton();
             this.txtPasswordLogin = new System.Windows.Forms.TextBox();
             this.txtUserNameLogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.rdoEmployerLogin = new System.Windows.Forms.RadioButton();
-            this.rdoJobSeekerLogin = new System.Windows.Forms.RadioButton();
             this.tbLogin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
@@ -102,6 +102,30 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(470, 352);
             this.pnlLogin.TabIndex = 22;
+            // 
+            // rdoEmployerLogin
+            // 
+            this.rdoEmployerLogin.AutoSize = true;
+            this.rdoEmployerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoEmployerLogin.Location = new System.Drawing.Point(296, 172);
+            this.rdoEmployerLogin.Name = "rdoEmployerLogin";
+            this.rdoEmployerLogin.Size = new System.Drawing.Size(115, 29);
+            this.rdoEmployerLogin.TabIndex = 21;
+            this.rdoEmployerLogin.TabStop = true;
+            this.rdoEmployerLogin.Text = "Employer";
+            this.rdoEmployerLogin.UseVisualStyleBackColor = true;
+            // 
+            // rdoJobSeekerLogin
+            // 
+            this.rdoJobSeekerLogin.AutoSize = true;
+            this.rdoJobSeekerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoJobSeekerLogin.Location = new System.Drawing.Point(146, 172);
+            this.rdoJobSeekerLogin.Name = "rdoJobSeekerLogin";
+            this.rdoJobSeekerLogin.Size = new System.Drawing.Size(134, 29);
+            this.rdoJobSeekerLogin.TabIndex = 20;
+            this.rdoJobSeekerLogin.TabStop = true;
+            this.rdoJobSeekerLogin.Text = "Job Seeker";
+            this.rdoJobSeekerLogin.UseVisualStyleBackColor = true;
             // 
             // txtPasswordLogin
             // 
@@ -326,34 +350,11 @@
             this.txtFirstName.Size = new System.Drawing.Size(265, 39);
             this.txtFirstName.TabIndex = 2;
             // 
-            // rdoEmployerLogin
-            // 
-            this.rdoEmployerLogin.AutoSize = true;
-            this.rdoEmployerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoEmployerLogin.Location = new System.Drawing.Point(296, 172);
-            this.rdoEmployerLogin.Name = "rdoEmployerLogin";
-            this.rdoEmployerLogin.Size = new System.Drawing.Size(115, 29);
-            this.rdoEmployerLogin.TabIndex = 21;
-            this.rdoEmployerLogin.TabStop = true;
-            this.rdoEmployerLogin.Text = "Employer";
-            this.rdoEmployerLogin.UseVisualStyleBackColor = true;
-            // 
-            // rdoJobSeekerLogin
-            // 
-            this.rdoJobSeekerLogin.AutoSize = true;
-            this.rdoJobSeekerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoJobSeekerLogin.Location = new System.Drawing.Point(146, 172);
-            this.rdoJobSeekerLogin.Name = "rdoJobSeekerLogin";
-            this.rdoJobSeekerLogin.Size = new System.Drawing.Size(134, 29);
-            this.rdoJobSeekerLogin.TabIndex = 20;
-            this.rdoJobSeekerLogin.TabStop = true;
-            this.rdoJobSeekerLogin.Text = "Job Seeker";
-            this.rdoJobSeekerLogin.UseVisualStyleBackColor = true;
-            // 
             // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(490, 620);
             this.Controls.Add(this.tbLogin);

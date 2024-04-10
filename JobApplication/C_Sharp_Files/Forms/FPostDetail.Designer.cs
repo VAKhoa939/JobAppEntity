@@ -53,8 +53,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.header1 = new JobApplication.UCSeekHeader();
             this.ucSeekHeader1 = new JobApplication.UCSeekHeader();
+            this.header1 = new JobApplication.UCSeekHeader();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCompanyAva)).BeginInit();
             this.panel3.SuspendLayout();
@@ -288,13 +288,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // header1
-            // 
-            this.header1.Location = new System.Drawing.Point(0, 0);
-            this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(1920, 120);
-            this.header1.TabIndex = 0;
-            // 
             // ucSeekHeader1
             // 
             this.ucSeekHeader1.Location = new System.Drawing.Point(0, 0);
@@ -302,10 +295,18 @@
             this.ucSeekHeader1.Size = new System.Drawing.Size(1920, 120);
             this.ucSeekHeader1.TabIndex = 13;
             // 
+            // header1
+            // 
+            this.header1.Location = new System.Drawing.Point(0, 0);
+            this.header1.Name = "header1";
+            this.header1.Size = new System.Drawing.Size(1920, 120);
+            this.header1.TabIndex = 0;
+            // 
             // FPostDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.ucSeekHeader1);
             this.Controls.Add(this.panel2);

@@ -30,8 +30,8 @@
         {
             this.flpKetQua = new System.Windows.Forms.FlowLayoutPanel();
             this.lblSoLuongKQ = new System.Windows.Forms.Label();
-            this.thanhTimKiem1 = new JobApplication.UCSearchBar();
             this.ucEmpHeader1 = new JobApplication.UCEmpHeader();
+            this.thanhTimKiem1 = new JobApplication.UCSearchBar();
             this.SuspendLayout();
             // 
             // flpKetQua
@@ -52,13 +52,6 @@
             this.lblSoLuongKQ.TabIndex = 6;
             this.lblSoLuongKQ.Text = "There are x results";
             // 
-            // thanhTimKiem1
-            // 
-            this.thanhTimKiem1.Location = new System.Drawing.Point(-9, 191);
-            this.thanhTimKiem1.Name = "thanhTimKiem1";
-            this.thanhTimKiem1.Size = new System.Drawing.Size(1920, 60);
-            this.thanhTimKiem1.TabIndex = 5;
-            // 
             // ucEmpHeader1
             // 
             this.ucEmpHeader1.Location = new System.Drawing.Point(-8, 51);
@@ -66,10 +59,18 @@
             this.ucEmpHeader1.Size = new System.Drawing.Size(1920, 120);
             this.ucEmpHeader1.TabIndex = 8;
             // 
+            // thanhTimKiem1
+            // 
+            this.thanhTimKiem1.Location = new System.Drawing.Point(-9, 191);
+            this.thanhTimKiem1.Name = "thanhTimKiem1";
+            this.thanhTimKiem1.Size = new System.Drawing.Size(1920, 60);
+            this.thanhTimKiem1.TabIndex = 5;
+            // 
             // FMyPosts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.ucEmpHeader1);
             this.Controls.Add(this.flpKetQua);
