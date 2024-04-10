@@ -34,12 +34,18 @@ namespace JobApplication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
             if (rdoJobSeekerLogin.Checked)
             {
-                this.Hide();
-                FAllPosts fAllPosts = new FAllPosts();
-                fAllPosts.Show();
+                foreach(JobSeeker js in listJobSeeker)
+                {
+                    if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
+                    {
+                        this.Hide();
+                        FAllPosts fAllPosts = new FAllPosts();
+                        fAllPosts.Show();
+                        return;
+                    }
+                }
             }
             else if (rdoEmployerLogin.Checked)
             {
