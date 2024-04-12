@@ -179,6 +179,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Sharp_Files\Forms\FPostDetail.resx">
       <DependentUpon>FPostDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Sharp_Files\Forms\UCApplyForm.resx">
       <DependentUpon>UCApplyForm.cs</DependentUpon>

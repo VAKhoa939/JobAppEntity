@@ -36,11 +36,6 @@ namespace JobApplication
         {
             if (rdoJobSeekerLogin.Checked)
             {
-<<<<<<< HEAD
-                Hide();
-                FAllPosts fAllPosts = new FAllPosts();
-                fAllPosts.Show();
-=======
                 foreach(JobSeeker js in listJobSeeker)
                 {
                     if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
@@ -51,7 +46,6 @@ namespace JobApplication
                         return;
                     }
                 }
->>>>>>> 87520f50c9593d8909d2d42dbe3f6280a3486c7d
             }
             else if (rdoEmployerLogin.Checked)
             {
@@ -59,17 +53,11 @@ namespace JobApplication
                 FCreatePost fCreatePost = new FCreatePost();
                 fCreatePost.Show();
             }
-<<<<<<< HEAD
-            else
-            {
-
-=======
             else 
             {
                 this.Hide();
                 FAdmin fAdmin = new FAdmin();
                 fAdmin.Show();
->>>>>>> 87520f50c9593d8909d2d42dbe3f6280a3486c7d
             }
         }
     }
