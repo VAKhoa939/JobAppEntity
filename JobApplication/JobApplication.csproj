@@ -49,61 +49,154 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C_Sharp_Files\UCBaiDang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="C_Sharp_Files\UCBaiDang.Designer.cs">
-      <DependentUpon>UCBaiDang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="C_Sharp_Files\FChiTietCongViec.cs">
+    <Compile Include="C_Sharp_Files\Classes\ApplyForm.cs" />
+    <Compile Include="C_Sharp_Files\Classes\Company.cs" />
+    <Compile Include="C_Sharp_Files\Classes\Employer.cs" />
+    <Compile Include="C_Sharp_Files\Classes\JobSeeker.cs" />
+    <Compile Include="C_Sharp_Files\Classes\Post.cs" />
+    <Compile Include="C_Sharp_Files\Classes\User.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\AnyDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\ApplyFormDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\ComEmpCatalogDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\CompanyDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\DBConnection.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\EmployerDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\EmpPostCatalogDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\JobSeekerDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\PostDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\PostDescCatalogDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\PostFormCatalogDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\PostImgCatalogDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\PostTagCatalogDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\SeekFormCatalogDAO.cs" />
+    <Compile Include="C_Sharp_Files\Forms\FAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="C_Sharp_Files\FChiTietCongViec.Designer.cs">
-      <DependentUpon>FChiTietCongViec.cs</DependentUpon>
+    <Compile Include="C_Sharp_Files\Forms\FAdmin.Designer.cs">
+      <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="C_Sharp_Files\FLogin.cs">
+    <Compile Include="C_Sharp_Files\Forms\FAllPosts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="C_Sharp_Files\FLogin.Designer.cs">
+    <Compile Include="C_Sharp_Files\Forms\FAllPosts.Designer.cs">
+      <DependentUpon>FAllPosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FCreatePost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FCreatePost.Designer.cs">
+      <DependentUpon>FCreatePost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FFormManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FFormManagement.Designer.cs">
+      <DependentUpon>FFormManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FHomePage.Designer.cs">
+      <DependentUpon>FHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="C_Sharp_Files\UCHeader.cs">
+    <Compile Include="C_Sharp_Files\Forms\FMyPosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FMyPosts.Designer.cs">
+      <DependentUpon>FMyPosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FPostDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\FPostDetail.Designer.cs">
+      <DependentUpon>FPostDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCApplyForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="C_Sharp_Files\UCHeader.Designer.cs">
-      <DependentUpon>UCHeader.cs</DependentUpon>
+    <Compile Include="C_Sharp_Files\Forms\UCApplyForm.Designer.cs">
+      <DependentUpon>UCApplyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCEmpHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCEmpHeader.Designer.cs">
+      <DependentUpon>UCEmpHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCEmpPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCEmpPost.Designer.cs">
+      <DependentUpon>UCEmpPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCSearchBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCSearchBar.Designer.cs">
+      <DependentUpon>UCSearchBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCSeekHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCSeekHeader.Designer.cs">
+      <DependentUpon>UCSeekHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCSeekPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="C_Sharp_Files\Forms\UCSeekPost.Designer.cs">
+      <DependentUpon>UCSeekPost.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Sharp_Files\Program.cs" />
+    <Compile Include="C_Sharp_Files\Utils\ImageUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="C_Sharp_Files\UCThanhTimKiem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="C_Sharp_Files\UCThanhTimKiem.Designer.cs">
-      <DependentUpon>UCThanhTimKiem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="C_Sharp_Files\FTinTuyenDung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="C_Sharp_Files\FTinTuyenDung.Designer.cs">
-      <DependentUpon>FTinTuyenDung.cs</DependentUpon>
-    </Compile>
-    <Compile Include="C_Sharp_Files\FTrangChu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="C_Sharp_Files\FTrangChu.Designer.cs">
-      <DependentUpon>FTrangChu.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="C_Sharp_Files\UCBaiDang.resx">
-      <DependentUpon>UCBaiDang.cs</DependentUpon>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FAdmin.resx">
+      <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="C_Sharp_Files\FChiTietCongViec.resx">
-      <DependentUpon>FChiTietCongViec.cs</DependentUpon>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FAllPosts.resx">
+      <DependentUpon>FAllPosts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="C_Sharp_Files\FLogin.resx">
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FCreatePost.resx">
+      <DependentUpon>FCreatePost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FFormManagement.resx">
+      <DependentUpon>FFormManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FHomePage.resx">
+      <DependentUpon>FHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="C_Sharp_Files\UCHeader.resx">
-      <DependentUpon>UCHeader.cs</DependentUpon>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FMyPosts.resx">
+      <DependentUpon>FMyPosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FPostDetail.resx">
+      <DependentUpon>FPostDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\UCApplyForm.resx">
+      <DependentUpon>UCApplyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\UCEmpHeader.resx">
+      <DependentUpon>UCEmpHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\UCEmpPost.resx">
+      <DependentUpon>UCEmpPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\UCSearchBar.resx">
+      <DependentUpon>UCSearchBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\UCSeekHeader.resx">
+      <DependentUpon>UCSeekHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\UCSeekPost.resx">
+      <DependentUpon>UCSeekPost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,15 +207,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="C_Sharp_Files\UCThanhTimKiem.resx">
-      <DependentUpon>UCThanhTimKiem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="C_Sharp_Files\FTinTuyenDung.resx">
-      <DependentUpon>FTinTuyenDung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="C_Sharp_Files\FTrangChu.resx">
-      <DependentUpon>FTrangChu.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,10 +222,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Image\Cat.jpg" />
-    <Content Include="Image\Starrail1.png" />
-    <Content Include="Image\Suletta.Mercury.600.3950579.jpg" />
-    <Content Include="Image\𝐒𝐔𝐋𝐄𝐓𝐓𝐀 𝐌𝐄𝐑𝐂𝐔𝐑𝐘.jpg" />
+    <Content Include="Images\Cat.jpg" />
+    <Content Include="Images\jun-seong-park-retouched.gif" />
+    <Content Include="Images\Starrail1.png" />
+    <Content Include="Images\Suletta.Mercury.600.3950579.jpg" />
+    <Content Include="Images\𝐒𝐔𝐋𝐄𝐓𝐓𝐀 𝐌𝐄𝐑𝐂𝐔𝐑𝐘.jpg" />
+    <Content Include="Queries\ApplyFormQuery.sql" />
+    <Content Include="Queries\ComEmpCatalogQuery.sql" />
+    <Content Include="Queries\CompanyQuery.sql" />
+    <Content Include="Queries\EmployerQuery.sql" />
+    <Content Include="Queries\EmpPostCatalogQuery.sql" />
+    <Content Include="Queries\JobSeekerQuery.sql" />
+    <Content Include="Queries\PostDescCatalogQuery.sql" />
+    <Content Include="Queries\PostFormCatalogQuery.sql" />
+    <Content Include="Queries\PostImgCatalogQuery.sql" />
+    <Content Include="Queries\PostQuery.sql" />
+    <Content Include="Queries\PostTagCatalogQuery.sql" />
+    <Content Include="Queries\SeekFormCatalogQuery.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
