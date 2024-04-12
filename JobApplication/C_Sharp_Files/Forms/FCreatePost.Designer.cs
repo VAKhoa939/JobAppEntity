@@ -50,12 +50,12 @@
             this.txtSkillReq = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.pbxJobImages3 = new System.Windows.Forms.PictureBox();
             this.pbxJobImages2 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ucEmpHeader1 = new JobApplication.UCEmpHeader();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages3)).BeginInit();
@@ -64,24 +64,26 @@
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.Cyan;
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(797, 795);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(200, 82);
             this.btnReset.TabIndex = 19;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnUpload
             // 
+            this.btnUpload.BackColor = System.Drawing.Color.Cyan;
             this.btnUpload.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.Location = new System.Drawing.Point(219, 795);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(200, 82);
             this.btnUpload.TabIndex = 18;
             this.btnUpload.Text = "Upload";
-            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // cbxWork
@@ -135,13 +137,14 @@
             // 
             // btnSelectImages
             // 
+            this.btnSelectImages.BackColor = System.Drawing.Color.Cyan;
             this.btnSelectImages.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectImages.Location = new System.Drawing.Point(1691, 579);
             this.btnSelectImages.Name = "btnSelectImages";
             this.btnSelectImages.Size = new System.Drawing.Size(132, 50);
             this.btnSelectImages.TabIndex = 13;
             this.btnSelectImages.Text = "Add";
-            this.btnSelectImages.UseVisualStyleBackColor = true;
+            this.btnSelectImages.UseVisualStyleBackColor = false;
             this.btnSelectImages.Click += new System.EventHandler(this.btnSelectImages_Click);
             // 
             // label2
@@ -278,6 +281,23 @@
             this.panel1.Size = new System.Drawing.Size(1900, 1025);
             this.panel1.TabIndex = 16;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(219, 520);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(1635, 22);
+            this.textBox1.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(14, 520);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 22);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Skill tags:";
+            // 
             // pbxJobImages3
             // 
             this.pbxJobImages3.Location = new System.Drawing.Point(1149, 580);
@@ -306,23 +326,6 @@
             this.ucEmpHeader1.Name = "ucEmpHeader1";
             this.ucEmpHeader1.Size = new System.Drawing.Size(1920, 120);
             this.ucEmpHeader1.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(14, 520);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 22);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Skill tags:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(219, 520);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1635, 22);
-            this.textBox1.TabIndex = 24;
             // 
             // FCreatePost
             // 
