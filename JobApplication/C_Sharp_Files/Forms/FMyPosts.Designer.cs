@@ -1,4 +1,4 @@
-﻿namespace JobApplication.C_Sharp_Files.Forms
+﻿namespace JobApplication
 {
     partial class FMyPosts
     {
@@ -54,6 +54,7 @@
             // 
             // ucEmpHeader1
             // 
+            this.ucEmpHeader1.BackColor = System.Drawing.Color.Coral;
             this.ucEmpHeader1.Location = new System.Drawing.Point(-8, 51);
             this.ucEmpHeader1.Name = "ucEmpHeader1";
             this.ucEmpHeader1.Size = new System.Drawing.Size(1920, 120);
@@ -78,6 +79,7 @@
             this.Controls.Add(this.thanhTimKiem1);
             this.Name = "FMyPosts";
             this.Text = "FMyPosts";
+            this.Load += new System.EventHandler(this.FMyPosts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

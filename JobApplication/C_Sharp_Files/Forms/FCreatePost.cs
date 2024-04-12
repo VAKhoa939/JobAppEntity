@@ -1,4 +1,4 @@
-﻿using JobApplication.C_Sharp_Files.Forms;
+﻿using JobApplication;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -11,6 +11,7 @@ namespace JobApplication
     {
         private ImageList uploadedImages = new ImageList();
         private int currentPictureBoxIndex = 0;
+        private PostDAO postDAO = new PostDAO();
 
         public FCreatePost()
         {
@@ -83,11 +84,28 @@ namespace JobApplication
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
+            createNewPost();
             // Redirect to FMyPosts form
             FMyPosts myPostsForm = new FMyPosts();
             myPostsForm.Show();
             // Optionally, hide the current form
-            this.Hide();
+            this.Close();
+        }
+
+        private void createNewPost()
+        {
+            // Create new Post object
+            int id = postDAO.GetList().Count;
+            string other = string.Format($"{txtAddress.Text}\n{this.cbxWork.GetItemText(this.cbxWork.SelectedItem)}");
+            Post tmp = new Post(id,txtPostName.Text, Convert.ToDecimal(txtSalary.Text), other);
+            tmp.Images.Add(this.pbxJobImages1.Image);
+            tmp.Images.Add(this.pbxJobImages2.Image);
+            tmp.Images.Add(this.pbxJobImages3.Image);
+            postDAO.Insert_1(tmp);
+
+            // Create new UCSeekPost
+           
+
         }
     }
 }

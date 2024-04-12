@@ -298,22 +298,22 @@ namespace JobApplication
 
         /* Tab 4: Post & PostFormCatalog */
 
-        private void btnPostInsert_Click(object sender, EventArgs e)
-        {
-            Post post = new Post(Convert.ToInt32(txtPostId.Text), txtPostName.Text, Convert.ToDecimal(txtPostSalary.Text), txtPostOthers.Text);
-            List<Employer> employers = employerDAO.GetList(); 
-            foreach (Employer employer in employers)
-            {
-                if (employer.UserName.Equals(txtPostEmpname.Text))
-                {
-                    postDAO.Insert(post, employer);
-                    gvPost_Load();
-                    gvEmpPost_Load();
-                    return;
-                }
-            }
-            MessageBox.Show("This company name doesn't exist.");
-        }
+        //private void btnPostInsert_Click(object sender, EventArgs e)
+        //{
+        //    Post post = new Post(Convert.ToInt32(txtPostId.Text), txtPostName.Text, Convert.ToDecimal(txtPostSalary.Text), txtPostOthers.Text);
+        //    List<Employer> employers = employerDAO.GetList(); 
+        //    foreach (Employer employer in employers)
+        //    {
+        //        if (employer.UserName.Equals(txtPostEmpname.Text))
+        //        {
+        //            postDAO.Insert(post, employer);
+        //            gvPost_Load();
+        //            gvEmpPost_Load();
+        //            return;
+        //        }
+        //    }
+        //    MessageBox.Show("This company name doesn't exist.");
+        //}
 
         private void btnPostDelete_Click(object sender, EventArgs e)
         {
@@ -327,12 +327,12 @@ namespace JobApplication
             gvPostImg_Load();
         }
 
-        private void btnPostUpdate_Click(object sender, EventArgs e)
-        {
-            Post post = new Post(Convert.ToInt32(txtPostId.Text), txtPostName.Text, Convert.ToDecimal(txtPostSalary.Text), txtPostOthers.Text);
-            postDAO.Update(post);
-            gvPost_Load();
-        }
+        //private void btnPostUpdate_Click(object sender, EventArgs e)
+        //{
+        //    Post post = new Post(Convert.ToInt32(txtPostId.Text), txtPostName.Text, Convert.ToDecimal(txtPostSalary.Text), txtPostOthers.Text);
+        //    postDAO.Update(post);
+        //    gvPost_Load();
+        //}
 
         private void gvPost_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -79,10 +79,22 @@ namespace JobApplication
             }
             return post;
         }
+        public void Insert_1(Post post)
+        {
+            sqlStr = string.Format("INSERT INTO Post (Id, Name, Salary, Others, Timeposted) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", post.Id, post.Name, post.Salary, post.Others, post.TimePosted.ToString("yyyy-MM-dd HH:mm:ss"));
+            dBConn.Execute(sqlStr, "Insert");
+            foreach (Image postImage in post.Images)
+            {
+                postImgDAO.Insert(post.Id, postImage);
+            }
+        }
+
 
         public void Insert(Post post, Employer employer)
         {
-            sqlStr = string.Format("INSERT INTO Post (Id, Name, Salary, Others, Timeposted) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", post.Id, post.Name, post.Salary, post.Others, post.TimePosted.ToString("yyyy-MM-dd HH:mm:ss"));
+            int id = GetList().Count;
+
+            sqlStr = string.Format("INSERT INTO Post (Id, Name, Salary, Others, Timeposted) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", id, post.Name, post.Salary, post.Others, post.TimePosted.ToString("yyyy-MM-dd HH:mm:ss"));
             dBConn.Execute(sqlStr, "Insert");
 
             foreach (string jobDesc in post.JobDescs)

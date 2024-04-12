@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace JobApplication
 {
-    static class ImageUtil
+    public static class ImageUtil
     {
         public static byte[] ImageToByte(Image image)
         {
+            if (image == null) return null;
             MemoryStream memoryStream = new MemoryStream();
             image.Save(memoryStream, ImageFormat.Jpeg);
             return memoryStream.ToArray();

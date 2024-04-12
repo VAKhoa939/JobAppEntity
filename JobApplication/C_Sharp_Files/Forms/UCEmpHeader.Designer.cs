@@ -72,6 +72,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -86,9 +87,12 @@
             // 
             // createAPostToolStripMenuItem
             // 
+            this.createAPostToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.createAPostToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.createAPostToolStripMenuItem.Name = "createAPostToolStripMenuItem";
             this.createAPostToolStripMenuItem.Size = new System.Drawing.Size(200, 41);
             this.createAPostToolStripMenuItem.Text = "Create a post";
+            this.createAPostToolStripMenuItem.Click += new System.EventHandler(this.createAPostToolStripMenuItem_Click);
             // 
             // panel2
             // 
@@ -122,6 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.panel1);
             this.Name = "UCEmpHeader";
             this.Size = new System.Drawing.Size(1920, 120);

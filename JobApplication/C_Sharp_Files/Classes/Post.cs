@@ -20,7 +20,7 @@ namespace JobApplication
         private List<string> tags;
         private List<ApplyForm> applyForms;
 
-        public Post(int id, string name, decimal salary, string others)
+        public Post(int id,string name, decimal salary, string others)
         {
             this.id = id;
             this.name = name;

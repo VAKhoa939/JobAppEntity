@@ -22,8 +22,10 @@ namespace JobApplication
             return images;
         }
 
+
         public void Insert(int postId, Image image)
         {
+            if (ImageUtil.ImageToByte(image) == null) return;
             sqlStr = string.Format("INSERT INTO PostImgCatalog (Postid, Postimage) VALUES ('{0}', @image)", postId);
             dBConn.Execute(sqlStr, "Insert", ImageUtil.ImageToByte(image));
         }

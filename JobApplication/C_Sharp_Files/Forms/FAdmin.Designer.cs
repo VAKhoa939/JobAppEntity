@@ -1290,7 +1290,7 @@
             this.btnPostUpdate.TabIndex = 8;
             this.btnPostUpdate.Text = "Update";
             this.btnPostUpdate.UseVisualStyleBackColor = true;
-            this.btnPostUpdate.Click += new System.EventHandler(this.btnPostUpdate_Click);
+            //this.btnPostUpdate.Click += new System.EventHandler(this.btnPostUpdate_Click);
             // 
             // btnPostDelete
             // 
@@ -1310,7 +1310,7 @@
             this.btnPostInsert.TabIndex = 6;
             this.btnPostInsert.Text = "Insert";
             this.btnPostInsert.UseVisualStyleBackColor = true;
-            this.btnPostInsert.Click += new System.EventHandler(this.btnPostInsert_Click);
+            //this.btnPostInsert.Click += new System.EventHandler(this.btnPostInsert_Click);
             // 
             // label36
             // 

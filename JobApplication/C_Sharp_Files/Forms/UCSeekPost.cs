@@ -15,7 +15,17 @@ namespace JobApplication
         private Post post;
         private Company company;
         private JobSeeker jobSeeker;
+        private string postTime;
+        private string postName;
+        private string postSalary;
+        private string postOther;
+        private Image postImage;
 
+        public string PostTime { get { return postTime; } set { postTime = value; lblThoiGianDang.Text = postTime; } }
+        public string PostName { get { return postName; } set { postName = value; lklblTenBaiDang.Text = postName; } }
+        public string PostSalary { get { return postSalary; } set { postSalary = value; lblTienLuong.Text = postSalary; } }
+        public string PostOther { get { return postOther; } set { postOther = value; lblKhac.Text = postOther;  } }
+        //public Image PostImage { get { return postImage; } set { postImage = value; imgLogo.; } }
         public UCSeekPost()
         {
             InitializeComponent();
