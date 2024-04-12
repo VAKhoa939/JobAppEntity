@@ -36,15 +36,19 @@ namespace JobApplication
             
             if (rdoJobSeekerLogin.Checked)
             {
-                this.Hide();
+                Hide();
                 FAllPosts fAllPosts = new FAllPosts();
                 fAllPosts.Show();
             }
             if (rdoEmployerLogin.Checked)
             {
-                this.Hide();
+                Hide();
                 FCreatePost fCreatePost = new FCreatePost();
                 fCreatePost.Show();
+            }
+            else
+            {
+
             }
         }
     }
