@@ -5,12 +5,13 @@ namespace JobApplication
 {
     public partial class FPostDetail : Form
     {
+        int intImgNum = 0;
+
         public FPostDetail()
         {
             InitializeComponent();
         }
 
-        int intImgNum = 0;
 
         private void tmrChangeImage_Tick(object sender, EventArgs e)
         {
@@ -47,6 +48,13 @@ namespace JobApplication
                 pbxCompanyAva2.Image = null;
                 pbxCompanyAva3.Image = null;
             }
+        }
+
+        private void btn_apply_Click(object sender, EventArgs e)
+        {
+            //FApplyForm applyForm = new FApplyForm(); // Create an instance of the FApplyForm
+            //applyForm.Show(); // Show the FApplyForm
+            this.Hide(); // Optionally, hide the current form if needed
         }
     }
 }

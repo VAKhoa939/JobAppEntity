@@ -11,7 +11,7 @@ create table JobSeeker (
 	Portraitimage varbinary(max)
 );
 
-insert into JobSeeker (Username, Email, Password, Phonenumber, Fullname, Address, Birthdate, Aboutme, Portraitimage) 
+insert into JobSeeker (Username, Email, Password, Phonenumber, Fullname, Address, Birthdate, Portraitimage) 
 values 
 	('', '', '', '', '', '', '', '0x'),
 	('', '', '', '', '', '', '', '0x'),

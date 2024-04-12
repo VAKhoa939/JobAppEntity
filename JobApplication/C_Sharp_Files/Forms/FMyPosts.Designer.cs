@@ -1,6 +1,6 @@
 ﻿namespace JobApplication
 {
-    partial class FAllPosts
+    partial class FMyPosts
     {
         /// <summary>
         /// Required designer variable.
@@ -28,56 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblSoLuongKQ = new System.Windows.Forms.Label();
             this.flpKetQua = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblSoLuongKQ = new System.Windows.Forms.Label();
+            this.ucEmpHeader1 = new JobApplication.UCEmpHeader();
             this.thanhTimKiem1 = new JobApplication.UCSearchBar();
-            this.header1 = new JobApplication.UCSeekHeader();
             this.SuspendLayout();
+            // 
+            // flpKetQua
+            // 
+            this.flpKetQua.AutoScroll = true;
+            this.flpKetQua.Location = new System.Drawing.Point(141, 351);
+            this.flpKetQua.Name = "flpKetQua";
+            this.flpKetQua.Size = new System.Drawing.Size(1620, 630);
+            this.flpKetQua.TabIndex = 7;
             // 
             // lblSoLuongKQ
             // 
             this.lblSoLuongKQ.AutoSize = true;
             this.lblSoLuongKQ.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuongKQ.Location = new System.Drawing.Point(750, 210);
+            this.lblSoLuongKQ.Location = new System.Drawing.Point(741, 261);
             this.lblSoLuongKQ.Name = "lblSoLuongKQ";
             this.lblSoLuongKQ.Size = new System.Drawing.Size(394, 57);
-            this.lblSoLuongKQ.TabIndex = 2;
+            this.lblSoLuongKQ.TabIndex = 6;
             this.lblSoLuongKQ.Text = "There are x results";
             // 
-            // flpKetQua
+            // ucEmpHeader1
             // 
-            this.flpKetQua.AutoScroll = true;
-            this.flpKetQua.Location = new System.Drawing.Point(150, 300);
-            this.flpKetQua.Name = "flpKetQua";
-            this.flpKetQua.Size = new System.Drawing.Size(1620, 630);
-            this.flpKetQua.TabIndex = 3;
+            this.ucEmpHeader1.BackColor = System.Drawing.Color.Coral;
+            this.ucEmpHeader1.Location = new System.Drawing.Point(-8, 51);
+            this.ucEmpHeader1.Name = "ucEmpHeader1";
+            this.ucEmpHeader1.Size = new System.Drawing.Size(1920, 120);
+            this.ucEmpHeader1.TabIndex = 8;
             // 
             // thanhTimKiem1
             // 
-            this.thanhTimKiem1.Location = new System.Drawing.Point(0, 140);
+            this.thanhTimKiem1.Location = new System.Drawing.Point(-9, 191);
             this.thanhTimKiem1.Name = "thanhTimKiem1";
             this.thanhTimKiem1.Size = new System.Drawing.Size(1920, 60);
-            this.thanhTimKiem1.TabIndex = 1;
+            this.thanhTimKiem1.TabIndex = 5;
             // 
-            // header1
-            // 
-            this.header1.Location = new System.Drawing.Point(1, 0);
-            this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(1920, 120);
-            this.header1.TabIndex = 0;
-            // 
-            // FAllPosts
+            // FMyPosts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.ucEmpHeader1);
             this.Controls.Add(this.flpKetQua);
             this.Controls.Add(this.lblSoLuongKQ);
             this.Controls.Add(this.thanhTimKiem1);
-            this.Controls.Add(this.header1);
-            this.Name = "FTinTuyenDung";
-            this.Load += new System.EventHandler(this.FAllPost_Load);
+            this.Name = "FMyPosts";
+            this.Text = "FMyPosts";
+            this.Load += new System.EventHandler(this.FMyPosts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,9 +87,9 @@
 
         #endregion
 
-        private UCSeekHeader header1;
-        private UCSearchBar thanhTimKiem1;
-        private System.Windows.Forms.Label lblSoLuongKQ;
         private System.Windows.Forms.FlowLayoutPanel flpKetQua;
+        private System.Windows.Forms.Label lblSoLuongKQ;
+        private UCSearchBar thanhTimKiem1;
+        private UCEmpHeader ucEmpHeader1;
     }
 }

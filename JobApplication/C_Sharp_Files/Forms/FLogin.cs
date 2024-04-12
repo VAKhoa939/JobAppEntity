@@ -18,6 +18,7 @@ namespace JobApplication
         private List<Company> listCompany;
         private List<Employer> listEmployer;
         private List<JobSeeker> listJobSeeker;
+
         public FLogin()
         {
             InitializeComponent();
@@ -33,22 +34,42 @@ namespace JobApplication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
             if (rdoJobSeekerLogin.Checked)
             {
+<<<<<<< HEAD
                 Hide();
                 FAllPosts fAllPosts = new FAllPosts();
                 fAllPosts.Show();
+=======
+                foreach(JobSeeker js in listJobSeeker)
+                {
+                    if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
+                    {
+                        this.Hide();
+                        FAllPosts fAllPosts = new FAllPosts(js);
+                        fAllPosts.Show();
+                        return;
+                    }
+                }
+>>>>>>> 87520f50c9593d8909d2d42dbe3f6280a3486c7d
             }
-            if (rdoEmployerLogin.Checked)
+            else if (rdoEmployerLogin.Checked)
             {
                 Hide();
                 FCreatePost fCreatePost = new FCreatePost();
                 fCreatePost.Show();
             }
+<<<<<<< HEAD
             else
             {
 
+=======
+            else 
+            {
+                this.Hide();
+                FAdmin fAdmin = new FAdmin();
+                fAdmin.Show();
+>>>>>>> 87520f50c9593d8909d2d42dbe3f6280a3486c7d
             }
         }
     }

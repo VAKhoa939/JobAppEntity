@@ -22,10 +22,12 @@ namespace JobApplication
             return images;
         }
 
+
         public void Insert(int postId, Image image)
         {
-            sqlStr = string.Format("INSERT INTO PostImgCatalog (Postid, Postimage) VALUES ('{0}', '{1}')", postId, ImageUtil.ImageToByte(image));
-            dBConn.Execute(sqlStr, "Insert");
+            if (ImageUtil.ImageToByte(image) == null) return;
+            sqlStr = string.Format("INSERT INTO PostImgCatalog (Postid, Postimage) VALUES ('{0}', @image)", postId);
+            dBConn.Execute(sqlStr, "Insert", ImageUtil.ImageToByte(image));
         }
 
         public void DeletePostId(int postId)
@@ -34,10 +36,16 @@ namespace JobApplication
             dBConn.Execute(sqlStr, "Delete");
         }
 
-        public void DeleteJobDesc(Image image)
+        public void DeleteImage(Image image)
         {
-            sqlStr = string.Format("DELETE FROM PostImgCatalog WHERE Postimage = '{0}'", ImageUtil.ImageToByte(image));
-            dBConn.Execute(sqlStr, "Delete");
+            sqlStr = string.Format("DELETE FROM PostImgCatalog WHERE Postimage = @image");
+            dBConn.Execute(sqlStr, "Delete", ImageUtil.ImageToByte(image));
+        }
+
+        public void Update(int postId, Image image)
+        {
+            sqlStr = string.Format("UPDATE PostImgCatalog SET Postimage = @image WHERE Postid = '{0}'", postId);
+            dBConn.Execute(sqlStr, "Update", ImageUtil.ImageToByte(image));
         }
     }
 }

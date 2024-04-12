@@ -12,9 +12,16 @@ namespace JobApplication
 {
     public partial class UCEmpHeader : UserControl
     {
+        FMyPosts fMyPosts;
         public UCEmpHeader()
         {
             InitializeComponent();
+        }
+
+        private void createAPostToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fMyPosts = Program.fMyPosts;
+            fMyPosts.fCreatePost.Show(this);
         }
     }
 }

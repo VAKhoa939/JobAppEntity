@@ -6,17 +6,23 @@ using System.Windows.Forms;
 
 namespace JobApplication
 {
-    internal static class Program
+    public class Program
     {
+        public static FMyPosts fMyPosts;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Temp());
+=======
+            fMyPosts = new FMyPosts();
+            Application.Run(fMyPosts);
+>>>>>>> 87520f50c9593d8909d2d42dbe3f6280a3486c7d
         }
     }
 }

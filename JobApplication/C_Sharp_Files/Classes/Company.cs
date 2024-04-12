@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class Company
+    public class Company
     {
         private string name;
         private Image logo;

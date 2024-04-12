@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace JobApplication
 {
@@ -20,9 +19,9 @@ namespace JobApplication
             DataTable dataTable = Load();
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                Company company = null;
-                company.Name = dataRow[0].ToString();
-                company.Logo = ImageUtil.ByteToImage((byte[])dataRow[1]);
+                string name = dataRow[0].ToString();
+                Image logo = ImageUtil.ByteToImage((byte[])dataRow[1]);
+                Company company = new Company(name, logo);
                 foreach (string empName in comEmpDAO.GetEmpNames(company.Name))
                 {
                     company.Employers.Add(employerDAO.GetEmployer(empName));
@@ -32,15 +31,14 @@ namespace JobApplication
             return companies;
         }
 
-        public Company GetCompany(string companyName)
+        public Company GetCompany(string name)
         {
-            sqlStr = string.Format("SELECT * FROM Company WHERE Name = '{0}'", companyName);
+            sqlStr = string.Format("SELECT * FROM Company WHERE Name = '{0}'", name);
             DataTable dataTable = dBConn.Load(sqlStr);
 
             DataRow dataRow = dataTable.Rows[0];
-            Company company = null;
-            company.Name = companyName;
-            company.Logo = ImageUtil.ByteToImage((byte[])dataRow[1]);
+            Image logo = ImageUtil.ByteToImage((byte[])dataRow[1]);
+            Company company = new Company(name, logo);
             foreach (string empName in comEmpDAO.GetEmpNames(company.Name))
             {
                 company.Employers.Add(employerDAO.GetEmployer(empName));
@@ -50,8 +48,8 @@ namespace JobApplication
 
         public void Insert(Company company)
         {
-            sqlStr = string.Format("INSERT INTO Company (Name, Logo) VALUES ('{0}', '{1}')", company.Name, ImageUtil.ImageToByte(company.Logo));
-            dBConn.Execute(sqlStr, "Insert");
+            sqlStr = string.Format("INSERT INTO Company (Name, Logo) VALUES ('{0}', @image)", company.Name);
+            dBConn.Execute(sqlStr, "Insert", ImageUtil.ImageToByte(company.Logo));
 
             foreach (Employer employer in company.Employers)
             {
@@ -72,8 +70,8 @@ namespace JobApplication
 
         public void Update(Company company)
         {
-            sqlStr = string.Format("UPDATE Company SET Logo = '{0}' WHERE Name = '{1}'", ImageUtil.ImageToByte(company.Logo), company.Name);
-            dBConn.Execute(sqlStr, "Update");
+            sqlStr = string.Format("UPDATE Company SET Logo = @image WHERE Name = '{0}'", company.Name);
+            dBConn.Execute(sqlStr, "Update", ImageUtil.ImageToByte(company.Logo));
 
             comEmpDAO.DeleteComName(company.Name);
             foreach (Employer employer in company.Employers)

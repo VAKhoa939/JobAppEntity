@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnReset = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
             this.cbxWork = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -37,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSelectImages = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pbxJobImages = new System.Windows.Forms.PictureBox();
+            this.pbxJobImages1 = new System.Windows.Forms.PictureBox();
             this.txtPostName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,30 +50,41 @@
             this.txtSkillReq = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pbxJobImages3 = new System.Windows.Forms.PictureBox();
+            this.pbxJobImages2 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ucEmpHeader1 = new JobApplication.UCEmpHeader();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.Cyan;
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(795, 708);
+            this.btnReset.Location = new System.Drawing.Point(797, 795);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(200, 82);
             this.btnReset.TabIndex = 19;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // btnSave
+            // btnUpload
             // 
-            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(219, 708);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(200, 82);
-            this.btnSave.TabIndex = 18;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnUpload.BackColor = System.Drawing.Color.Cyan;
+            this.btnUpload.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.Location = new System.Drawing.Point(219, 795);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(200, 82);
+            this.btnUpload.TabIndex = 18;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // cbxWork
             // 
@@ -125,13 +137,15 @@
             // 
             // btnSelectImages
             // 
+            this.btnSelectImages.BackColor = System.Drawing.Color.Cyan;
             this.btnSelectImages.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectImages.Location = new System.Drawing.Point(1757, 520);
+            this.btnSelectImages.Location = new System.Drawing.Point(1691, 579);
             this.btnSelectImages.Name = "btnSelectImages";
             this.btnSelectImages.Size = new System.Drawing.Size(132, 50);
             this.btnSelectImages.TabIndex = 13;
             this.btnSelectImages.Text = "Add";
-            this.btnSelectImages.UseVisualStyleBackColor = true;
+            this.btnSelectImages.UseVisualStyleBackColor = false;
+            this.btnSelectImages.Click += new System.EventHandler(this.btnSelectImages_Click);
             // 
             // label2
             // 
@@ -143,13 +157,13 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Post\'s name:";
             // 
-            // pbxJobImages
+            // pbxJobImages1
             // 
-            this.pbxJobImages.Location = new System.Drawing.Point(219, 520);
-            this.pbxJobImages.Name = "pbxJobImages";
-            this.pbxJobImages.Size = new System.Drawing.Size(1516, 50);
-            this.pbxJobImages.TabIndex = 12;
-            this.pbxJobImages.TabStop = false;
+            this.pbxJobImages1.Location = new System.Drawing.Point(219, 580);
+            this.pbxJobImages1.Name = "pbxJobImages1";
+            this.pbxJobImages1.Size = new System.Drawing.Size(459, 167);
+            this.pbxJobImages1.TabIndex = 12;
+            this.pbxJobImages1.TabStop = false;
             // 
             // txtPostName
             // 
@@ -162,7 +176,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 520);
+            this.label7.Location = new System.Drawing.Point(14, 580);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 22);
             this.label7.TabIndex = 11;
@@ -238,8 +252,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.pbxJobImages3);
+            this.panel1.Controls.Add(this.pbxJobImages2);
             this.panel1.Controls.Add(this.btnReset);
-            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.btnUpload);
             this.panel1.Controls.Add(this.cbxWork);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtAddress);
@@ -247,7 +265,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSelectImages);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pbxJobImages);
+            this.panel1.Controls.Add(this.pbxJobImages1);
             this.panel1.Controls.Add(this.txtPostName);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
@@ -263,6 +281,45 @@
             this.panel1.Size = new System.Drawing.Size(1900, 1025);
             this.panel1.TabIndex = 16;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(219, 520);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(1635, 22);
+            this.textBox1.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(14, 520);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 22);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Skill tags:";
+            // 
+            // pbxJobImages3
+            // 
+            this.pbxJobImages3.Location = new System.Drawing.Point(1149, 580);
+            this.pbxJobImages3.Name = "pbxJobImages3";
+            this.pbxJobImages3.Size = new System.Drawing.Size(459, 167);
+            this.pbxJobImages3.TabIndex = 21;
+            this.pbxJobImages3.TabStop = false;
+            // 
+            // pbxJobImages2
+            // 
+            this.pbxJobImages2.Location = new System.Drawing.Point(684, 580);
+            this.pbxJobImages2.Name = "pbxJobImages2";
+            this.pbxJobImages2.Size = new System.Drawing.Size(459, 167);
+            this.pbxJobImages2.TabIndex = 20;
+            this.pbxJobImages2.TabStop = false;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // ucEmpHeader1
             // 
             this.ucEmpHeader1.Location = new System.Drawing.Point(0, 0);
@@ -274,14 +331,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.ucEmpHeader1);
             this.Controls.Add(this.panel1);
             this.Name = "FCreatePost";
             this.Text = "FCreatePost";
-            ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxJobImages2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,7 +349,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.ComboBox cbxWork;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAddress;
@@ -297,7 +357,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSelectImages;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pbxJobImages;
+        private System.Windows.Forms.PictureBox pbxJobImages1;
         private System.Windows.Forms.TextBox txtPostName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
@@ -310,5 +370,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private UCEmpHeader ucEmpHeader1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox pbxJobImages3;
+        private System.Windows.Forms.PictureBox pbxJobImages2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

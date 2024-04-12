@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class User
+    public class User
     {
         protected string userName;
         protected string email;

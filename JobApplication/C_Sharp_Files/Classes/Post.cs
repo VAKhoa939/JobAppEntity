@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class Post
+    public class Post
     {
         private int id;
         private string name;
@@ -19,6 +19,32 @@ namespace JobApplication
         private List<Image> images;
         private List<string> tags;
         private List<ApplyForm> applyForms;
+
+        public Post(int id,string name, decimal salary, string others)
+        {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+            this.others = others;
+            timePosted = DateTime.Now;
+            jobDesc = new List<string>();
+            images = new List<Image>();
+            tags = new List<string>();
+            applyForms = new List<ApplyForm>();
+        }
+
+        public Post(int id, string name, decimal salary, string others, DateTime timePosted)
+        {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+            this.others = others;
+            this.timePosted = timePosted;
+            jobDesc = new List<string>();
+            images = new List<Image>();
+            tags = new List<string>();
+            applyForms = new List<ApplyForm>();
+        }
 
         public Post(int id, string name, decimal salary, string others, DateTime timePosted, List<string> jobDesc, List<Image> images, List<string> tags, List<ApplyForm> applyForms)
         {
@@ -85,26 +111,6 @@ namespace JobApplication
         { 
             get { return applyForms; } 
             set { applyForms = value; }
-        }
-
-        public UCSeekPost GetPostInfo(Company company)
-        {
-            UCSeekPost ucPost = new UCSeekPost();
-            ucPost.lblThoiGianDang.Text = new DateTime(DateTime.Now.Ticks - timePosted.Ticks).ToString("HH:mm");
-            ucPost.lklblTenBaiDang.Text = name;
-            ucPost.imgLogo.Image = company.Logo;
-            ucPost.lblTenCongTy.Text = company.Name;
-            ucPost.lblTienLuong.Text = salary.ToString();
-            ucPost.lblKhac.Text = others;
-            foreach (string tag in tags)
-            {
-                Button btnTag = new Button();
-                btnTag.Text = tag;
-                btnTag.Size = new Size(100, 32);
-                btnTag.Font = new Font("Times New Roman", 11);
-                ucPost.flpTags.Controls.Add(btnTag);
-            }
-            return ucPost;
         }
     }
 }
