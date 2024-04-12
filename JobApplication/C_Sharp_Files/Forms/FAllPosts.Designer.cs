@@ -76,8 +76,8 @@
             this.Controls.Add(this.lblSoLuongKQ);
             this.Controls.Add(this.thanhTimKiem1);
             this.Controls.Add(this.header1);
-            this.Name = "FAllPosts";
-            this.Load += new System.EventHandler(this.TinTuyenDung_Load);
+            this.Name = "FTinTuyenDung";
+            this.Load += new System.EventHandler(this.FAllPost_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
