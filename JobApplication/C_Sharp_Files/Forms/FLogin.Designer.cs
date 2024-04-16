@@ -45,10 +45,17 @@ namespace JobApplication
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pnlRegister = new System.Windows.Forms.Panel();
+            this.txtPhoneNumberJS = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtEmailJS = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtFirstNameJS = new System.Windows.Forms.TextBox();
             this.lblRepeatPassword = new System.Windows.Forms.Label();
             this.txtPasswordRepeatJS = new System.Windows.Forms.TextBox();
             this.txtPasswordJS = new System.Windows.Forms.TextBox();
-            this.txtEmailJS = new System.Windows.Forms.TextBox();
+            this.txtLastNameJS = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.btnJSRegister = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -64,7 +71,7 @@ namespace JobApplication
             this.label2 = new System.Windows.Forms.Label();
             this.txtPasswordEmp = new System.Windows.Forms.TextBox();
             this.txtLastNameEmp = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtUserNameEmp = new System.Windows.Forms.TextBox();
             this.txtEmailEmp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -199,10 +206,17 @@ namespace JobApplication
             // 
             // pnlRegister
             // 
+            this.pnlRegister.Controls.Add(this.txtPhoneNumberJS);
+            this.pnlRegister.Controls.Add(this.label10);
+            this.pnlRegister.Controls.Add(this.txtEmailJS);
+            this.pnlRegister.Controls.Add(this.label11);
+            this.pnlRegister.Controls.Add(this.label3);
+            this.pnlRegister.Controls.Add(this.label5);
+            this.pnlRegister.Controls.Add(this.txtFirstNameJS);
             this.pnlRegister.Controls.Add(this.lblRepeatPassword);
             this.pnlRegister.Controls.Add(this.txtPasswordRepeatJS);
             this.pnlRegister.Controls.Add(this.txtPasswordJS);
-            this.pnlRegister.Controls.Add(this.txtEmailJS);
+            this.pnlRegister.Controls.Add(this.txtLastNameJS);
             this.pnlRegister.Controls.Add(this.lblEmail);
             this.pnlRegister.Controls.Add(this.btnJSRegister);
             this.pnlRegister.Controls.Add(this.lblPassword);
@@ -211,6 +225,41 @@ namespace JobApplication
             this.pnlRegister.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.pnlRegister, "pnlRegister");
             this.pnlRegister.Name = "pnlRegister";
+            // 
+            // txtPhoneNumberJS
+            // 
+            resources.ApplyResources(this.txtPhoneNumberJS, "txtPhoneNumberJS");
+            this.txtPhoneNumberJS.Name = "txtPhoneNumberJS";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // txtEmailJS
+            // 
+            resources.ApplyResources(this.txtEmailJS, "txtEmailJS");
+            this.txtEmailJS.Name = "txtEmailJS";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // txtFirstNameJS
+            // 
+            resources.ApplyResources(this.txtFirstNameJS, "txtFirstNameJS");
+            this.txtFirstNameJS.Name = "txtFirstNameJS";
             // 
             // lblRepeatPassword
             // 
@@ -227,10 +276,10 @@ namespace JobApplication
             resources.ApplyResources(this.txtPasswordJS, "txtPasswordJS");
             this.txtPasswordJS.Name = "txtPasswordJS";
             // 
-            // txtEmailJS
+            // txtLastNameJS
             // 
-            resources.ApplyResources(this.txtEmailJS, "txtEmailJS");
-            this.txtEmailJS.Name = "txtEmailJS";
+            resources.ApplyResources(this.txtLastNameJS, "txtLastNameJS");
+            this.txtLastNameJS.Name = "txtLastNameJS";
             // 
             // lblEmail
             // 
@@ -278,7 +327,7 @@ namespace JobApplication
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtPasswordEmp);
             this.panel1.Controls.Add(this.txtLastNameEmp);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtUserNameEmp);
             this.panel1.Controls.Add(this.txtEmailEmp);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
@@ -331,10 +380,10 @@ namespace JobApplication
             resources.ApplyResources(this.txtLastNameEmp, "txtLastNameEmp");
             this.txtLastNameEmp.Name = "txtLastNameEmp";
             // 
-            // textBox5
+            // txtUserNameEmp
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.txtUserNameEmp, "txtUserNameEmp");
+            this.txtUserNameEmp.Name = "txtUserNameEmp";
             // 
             // txtEmailEmp
             // 
@@ -358,9 +407,11 @@ namespace JobApplication
             // 
             // btnEmployerRegister
             // 
+            this.btnEmployerRegister.BackColor = System.Drawing.Color.LightSalmon;
             resources.ApplyResources(this.btnEmployerRegister, "btnEmployerRegister");
             this.btnEmployerRegister.Name = "btnEmployerRegister";
-            this.btnEmployerRegister.UseVisualStyleBackColor = true;
+            this.btnEmployerRegister.UseVisualStyleBackColor = false;
+            this.btnEmployerRegister.Click += new System.EventHandler(this.btnEmployerRegister_Click);
             // 
             // label8
             // 
@@ -447,7 +498,6 @@ namespace JobApplication
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::JobApplication.Properties.Resources.Nitro_Wallpaper_5000x2813;
             this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
             this.Name = "FLogin";
@@ -486,7 +536,7 @@ namespace JobApplication
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel pnlRegister;
         private System.Windows.Forms.TextBox txtPasswordJS;
-        private System.Windows.Forms.TextBox txtEmailJS;
+        private System.Windows.Forms.TextBox txtLastNameJS;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Button btnJSRegister;
         private System.Windows.Forms.Label lblUserNameJobSeeker;
@@ -509,7 +559,7 @@ namespace JobApplication
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPasswordEmp;
         private System.Windows.Forms.TextBox txtLastNameEmp;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtUserNameEmp;
         private System.Windows.Forms.TextBox txtEmailEmp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -526,6 +576,13 @@ namespace JobApplication
         private System.Windows.Forms.PictureBox picComLogo;
         private System.Windows.Forms.Button btnComChooseimage;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtFirstNameJS;
+        private System.Windows.Forms.TextBox txtPhoneNumberJS;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtEmailJS;
+        private System.Windows.Forms.Label label11;
     }
 }
 

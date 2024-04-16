@@ -244,6 +244,8 @@
   <ItemGroup>
     <Content Include="Images\Cat.jpg" />
     <Content Include="Images\jun-seong-park-retouched.gif" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\a43ee3ea-fc85-4ffd-b59b-c0e38bb638bc.jpg" />
     <None Include="Images\Nitro_Wallpaper_5000x2813.jpg" />
     <Content Include="Images\Starrail1.png" />
     <Content Include="Images\Suletta.Mercury.600.3950579.jpg" />
@@ -260,7 +262,6 @@
     <Content Include="Queries\PostQuery.sql" />
     <Content Include="Queries\PostTagCatalogQuery.sql" />
     <Content Include="Queries\SeekFormCatalogQuery.sql" />
-    <None Include="Resources\Nitro_Wallpaper_5000x2813.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

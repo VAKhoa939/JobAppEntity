@@ -92,12 +92,53 @@ namespace JobApplication
         private void btnCompRegister_Click(object sender, EventArgs e)
         {
             Company company = new Company(txtCompanyNameComp.Text, picComLogo.Image);
-            companyDAO.Insert(company);
+            foreach (var comp in listCompany)
+            {
+                if (txtCompanyNameComp.Text != comp.Name)
+                {
+                    companyDAO.Insert(company);
+                    listCompany.Add(company);
+                    MessageBox.Show("Add new Company successfully");
+                    return;
+                }
+            }
+            MessageBox.Show("Company already registered");
         }
 
         private void btnJSRegister_Click(object sender, EventArgs e)
         {
+            JobSeeker jobSeeker = new JobSeeker(txtUserNameJS.Text,txtEmailJS.Text, txtPasswordJS.Text, txtPhoneNumberJS.Text, txtFirstNameJS.Text + txtLastNameJS);
+            
+            foreach(var jobseeker in listJobSeeker)
+            {
+                if(txtUserNameJS.Text != jobseeker.UserName)
+                {
+                    jobSeekerDAO.Insert(jobSeeker);
+                    listJobSeeker.Add(jobseeker);
+                    MessageBox.Show("Add new Job Seeker successfully");
+                    return;
+                }
+                
+            }
+            MessageBox.Show("UserName already registered");
+        }
 
+        private void btnEmployerRegister_Click(object sender, EventArgs e)
+        {
+            Employer employer = new Employer(txtUserNameEmp.Text, txtEmailEmp.Text, txtPasswordEmp.Text, txtPhoneNumberEmp.Text,txtFirstNameEmp.Text + txtLastNameEmp.Text);
+            foreach (var company in listCompany)
+            {
+                if (txtCompanyNameComp.Text == company.Name)
+                {
+                    employerDAO.Insert(employer,company);
+                    MessageBox.Show("Add new Employer successfully");
+                    return;
+                }
+            }
+            MessageBox.Show("Company Name not registered!");
+            
+
+            
         }
     }
 }

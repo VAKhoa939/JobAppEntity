@@ -15,6 +15,10 @@ namespace JobApplication
         private List<ApplyForm> applyForms;
         public JobSeeker(string userName, string email, string password, string phoneNumber, string fullName): base(userName, email, password, phoneNumber, fullName)
         {
+            address = " ";
+            this.birthDate = DateTime.Now;
+            portraitImage = global::JobApplication.Properties.Resources.user;
+            applyForms = new List<ApplyForm>();
         }
         public JobSeeker(string userName, string email, string password, string phoneNumber, string fullName, string address, DateTime birthDate, Image portraitImage) : base(userName, email, password, phoneNumber, fullName)
         {
