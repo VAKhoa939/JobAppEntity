@@ -445,7 +445,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::JobApplication.Properties.Resources.Nitro_Wallpaper_5000x28131;
+            this.BackgroundImage = global::JobApplication.Properties.Resources.Cat;
             this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
             this.Name = "FLogin";

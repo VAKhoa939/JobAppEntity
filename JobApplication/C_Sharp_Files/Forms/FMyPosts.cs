@@ -15,13 +15,21 @@ namespace JobApplication
     {
         //global variables
         public FCreatePost fCreatePost;
+        private Employer user;
         private PostDAO postDAO = new PostDAO();
         private List<Post> list = new List<Post>();
-
 
         public FMyPosts()
         {
             InitializeComponent();
+            this.fCreatePost = new FCreatePost();
+            list = postDAO.GetList();
+        }
+
+        public FMyPosts(Employer user)
+        {
+            InitializeComponent();
+            this.user = user;
             this.fCreatePost = new FCreatePost();
             list = postDAO.GetList();
         }

@@ -48,13 +48,13 @@ namespace JobApplication
             }
             else if (rdoEmployerLogin.Checked)
             {
-                foreach (JobSeeker js in listJobSeeker)
+                foreach (Employer js in listEmployer)
                 {
                     if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
                     {
                         Hide();
-                        FCreatePost fCreatePost = new FCreatePost();
-                        fCreatePost.Show();
+                        FMyPosts fMyPosts = new FMyPosts(js);
+                        fMyPosts.Show();
                         return;
                     }
                 }
