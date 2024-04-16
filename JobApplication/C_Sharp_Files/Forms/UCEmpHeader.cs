@@ -22,7 +22,7 @@ namespace JobApplication
         private void createAPostToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ((Form)this.TopLevelControl).Close();
-            FCreatePost fCreatePost = new FCreatePost();
+            FCreatePost fCreatePost = new FCreatePost(user);
             fCreatePost.Show();
         }
     }

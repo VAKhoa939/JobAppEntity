@@ -49,7 +49,7 @@ namespace JobApplication
         {
             ((Form)this.TopLevelControl).Close();
             //FFormManagement fFormManagement = new FFormManagement(post, company, user);
-            FFormManagement fFormManagement = new FFormManagement();
+            FFormManagement fFormManagement = new FFormManagement(post);
             fFormManagement.ShowDialog();
         }
     }

@@ -55,6 +55,7 @@ namespace JobApplication
                         Hide();
                         FMyPosts fMyPosts = new FMyPosts(emp);
                         fMyPosts.Show();
+                        return;
                     }
                 }
                 MessageBox.Show("UserName or Password is not correct, please try again!");

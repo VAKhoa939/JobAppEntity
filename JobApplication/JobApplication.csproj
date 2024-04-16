@@ -244,6 +244,9 @@
   <ItemGroup>
     <Content Include="Images\Cat.jpg" />
     <Content Include="Images\jun-seong-park-retouched.gif" />
+    <None Include="Resources\R.jpg" />
+    <None Include="Resources\SIM.jpg" />
+    <None Include="Resources\OIP.jpg" />
     <None Include="Images\Nitro_Wallpaper_5000x2813.jpg" />
     <Content Include="Images\Starrail1.png" />
     <Content Include="Images\Suletta.Mercury.600.3950579.jpg" />

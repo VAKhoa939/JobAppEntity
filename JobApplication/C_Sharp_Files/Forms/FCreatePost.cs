@@ -93,7 +93,7 @@ namespace JobApplication
         {
             createNewPost();
             // Redirect to FMyPosts form
-            FMyPosts myPostsForm = new FMyPosts();
+            FMyPosts myPostsForm = new FMyPosts(user);
             myPostsForm.Show();
             // Optionally, hide the current form
             this.Close();
@@ -108,8 +108,11 @@ namespace JobApplication
             tmp.Images.Add(this.pbxJobImages1.Image);
             tmp.Images.Add(this.pbxJobImages2.Image);
             tmp.Images.Add(this.pbxJobImages3.Image);
-            postDAO.Insert_1(tmp);
+            tmp.JobDescs.Add("- Skill Requirement: " + txtSkillReq.Text);
+            tmp.JobDescs.Add("- In this job you need to work about: " + txtWorkHours.Text);
+            tmp.JobDescs.Add("- For any further detail please contact by: " + txtContact.Text);
             postDAO.Insert(tmp, user);
+            user.Posts.Add(tmp);
         }
     }
 }
