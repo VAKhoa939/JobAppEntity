@@ -13,7 +13,9 @@ namespace JobApplication
         private DateTime birthDate;
         private Image portraitImage;
         private List<ApplyForm> applyForms;
-
+        public JobSeeker(string userName, string email, string password, string phoneNumber, string fullName): base(userName, email, password, phoneNumber, fullName)
+        {
+        }
         public JobSeeker(string userName, string email, string password, string phoneNumber, string fullName, string address, DateTime birthDate, Image portraitImage) : base(userName, email, password, phoneNumber, fullName)
         {
             this.address = address;
