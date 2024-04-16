@@ -125,7 +125,6 @@
             // 
             // imgLogo
             // 
-            this.imgLogo.Image = global::JobApplication.Properties.Resources.Cat;
             this.imgLogo.Location = new System.Drawing.Point(3, 3);
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.Size = new System.Drawing.Size(70, 70);

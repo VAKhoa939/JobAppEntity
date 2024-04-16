@@ -24,53 +24,81 @@ namespace JobApplication
             InitializeComponent();
             listCompany = companyDAO.GetList();
             listEmployer = employerDAO.GetList();
+            //WindowState = FormWindowState.Maximized;
             listJobSeeker = jobSeekerDAO.GetList();
-        }
-
-        private void pnlRegister_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (rdoJobSeekerLogin.Checked)
             {
-<<<<<<< HEAD
-                Hide();
-                FAllPosts fAllPosts = new FAllPosts();
-                fAllPosts.Show();
-=======
                 foreach(JobSeeker js in listJobSeeker)
                 {
                     if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
                     {
-                        this.Hide();
+                        Hide();
                         FAllPosts fAllPosts = new FAllPosts(js);
                         fAllPosts.Show();
                         return;
                     }
                 }
->>>>>>> 87520f50c9593d8909d2d42dbe3f6280a3486c7d
+                MessageBox.Show("UserName or Password is not correct, please try again!");
+                txtUserNameLogin.Text = string.Empty;
+                txtPasswordLogin.Text = string.Empty;
             }
             else if (rdoEmployerLogin.Checked)
             {
-                Hide();
-                FCreatePost fCreatePost = new FCreatePost();
-                fCreatePost.Show();
+                foreach (JobSeeker js in listJobSeeker)
+                {
+                    if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
+                    {
+                        Hide();
+                        FCreatePost fCreatePost = new FCreatePost();
+                        fCreatePost.Show();
+                        return;
+                    }
+                }
+                MessageBox.Show("UserName or Password is not correct, please try again!");
+                txtUserNameLogin.Text = string.Empty;
+                txtPasswordLogin.Text = string.Empty;
             }
-<<<<<<< HEAD
-            else
-            {
-
-=======
             else 
             {
                 this.Hide();
                 FAdmin fAdmin = new FAdmin();
                 fAdmin.Show();
->>>>>>> 87520f50c9593d8909d2d42dbe3f6280a3486c7d
             }
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FLogin_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void picComLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComChooseimage_Click(object sender, EventArgs e)
+        {
+            picComLogo.Image = new Bitmap(ImageUtil.UploadImage(), new Size(70, 70));
+        }
+
+        private void btnCompRegister_Click(object sender, EventArgs e)
+        {
+            Company company = new Company(txtCompanyNameComp.Text, picComLogo.Image);
+            companyDAO.Insert(company);
+        }
+
+        private void btnJSRegister_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

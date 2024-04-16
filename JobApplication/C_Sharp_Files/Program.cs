@@ -8,7 +8,6 @@ namespace JobApplication
 {
     public class Program
     {
-        public static FMyPosts fMyPosts;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,12 +16,7 @@ namespace JobApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Temp());
-=======
-            fMyPosts = new FMyPosts();
-            Application.Run(fMyPosts);
->>>>>>> 87520f50c9593d8909d2d42dbe3f6280a3486c7d
+            Application.Run(new FLogin());
         }
     }
 }
