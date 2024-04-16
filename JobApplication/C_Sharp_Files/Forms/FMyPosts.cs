@@ -13,40 +13,36 @@ namespace JobApplication
 {
     public partial class FMyPosts : Form
     {
-        //global variables
-        public FCreatePost fCreatePost; 
-        private PostDAO postDAO = new PostDAO();
-        private List<Post> list = new List<Post>();
+        private CompanyDAO companyDAO = new CompanyDAO();
+        private ComEmpCatalogDAO comEmpDAO = new ComEmpCatalogDAO();
+        private Employer user;
 
-        
+        public FMyPosts(Employer user)
+        {
+            InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+            ucEmpHeader1.user = user;
+            this.user = user;
+        }
+
         public FMyPosts()
         {
             InitializeComponent();
-            this.fCreatePost = new FCreatePost();
-            list = postDAO.GetList();
-        }
-         
-        private void createList()
-        {
-            if(flpKetQua.Controls.Count < 0)
-            {
-                flpKetQua.Controls.Clear();
-            }
-            else
-                foreach(Post post in list)
-                {
-                    UCSeekPost tmp1 = new UCSeekPost();
-                    tmp1.PostName = post.Name;
-                    tmp1.PostSalary = post.Salary.ToString();
-                    tmp1.PostTime = post.TimePosted.ToShortDateString();
-                    tmp1.PostOther = post.Others;
-                    flpKetQua.Controls.Add(tmp1);
-                }
+            WindowState = FormWindowState.Maximized;
         }
 
-        private void FMyPosts_Load(object sender, EventArgs e)
+    private void FMyPosts_Load(object sender, EventArgs e)
         {
-            createList();
+            int noPosts = 0;
+
+            Company company = companyDAO.GetCompany(comEmpDAO.GetComName(user.UserName));
+            foreach (Post post in user.Posts)
+            {
+                noPosts++;
+                UCEmpPost ucPost = new UCEmpPost(post, company, user);
+                flpKetQua.Controls.Add(ucPost);
+            }
+            lblSoLuongKQ.Text = "There are " + noPosts + " results";
         }
     }
 }

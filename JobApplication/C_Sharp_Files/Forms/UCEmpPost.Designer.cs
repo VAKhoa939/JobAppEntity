@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblThoiGianDang = new System.Windows.Forms.Label();
             this.lblKhac = new System.Windows.Forms.Label();
             this.flpTags = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTienLuong = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@
             this.lblTenCongTy = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.lklblTenBaiDang = new System.Windows.Forms.LinkLabel();
-            this.lblThoiGianDang = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -54,6 +54,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(502, 380);
             this.panel1.TabIndex = 3;
+            // 
+            // lblThoiGianDang
+            // 
+            this.lblThoiGianDang.AutoSize = true;
+            this.lblThoiGianDang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGianDang.Location = new System.Drawing.Point(32, 28);
+            this.lblThoiGianDang.Name = "lblThoiGianDang";
+            this.lblThoiGianDang.Size = new System.Drawing.Size(51, 20);
+            this.lblThoiGianDang.TabIndex = 6;
+            this.lblThoiGianDang.Text = "label1";
             // 
             // lblKhac
             // 
@@ -119,16 +129,7 @@
             this.lklblTenBaiDang.TabIndex = 1;
             this.lklblTenBaiDang.TabStop = true;
             this.lklblTenBaiDang.Text = "linkLabel1";
-            // 
-            // lblThoiGianDang
-            // 
-            this.lblThoiGianDang.AutoSize = true;
-            this.lblThoiGianDang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThoiGianDang.Location = new System.Drawing.Point(32, 28);
-            this.lblThoiGianDang.Name = "lblThoiGianDang";
-            this.lblThoiGianDang.Size = new System.Drawing.Size(51, 20);
-            this.lblThoiGianDang.TabIndex = 6;
-            this.lblThoiGianDang.Text = "label1";
+            this.lklblTenBaiDang.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblTenBaiDang_LinkClicked);
             // 
             // UCEmpPost
             // 

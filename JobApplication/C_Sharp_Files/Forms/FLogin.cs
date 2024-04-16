@@ -40,7 +40,7 @@ namespace JobApplication
                 {
                     if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
                     {
-                        this.Hide();
+                        Hide();
                         FAllPosts fAllPosts = new FAllPosts(js);
                         fAllPosts.Show();
                         return;
@@ -49,9 +49,15 @@ namespace JobApplication
             }
             else if (rdoEmployerLogin.Checked)
             {
-                Hide();
-                FCreatePost fCreatePost = new FCreatePost();
-                fCreatePost.Show();
+                foreach (Employer emp in listEmployer)
+                {
+                    if (emp.UserName.Equals(txtUserNameLogin.Text) && (emp.Password.Equals(txtPasswordLogin.Text)))
+                    {
+                        Hide();
+                        FMyPosts fMyPosts = new FMyPosts(emp);
+                        fMyPosts.Show();
+                    }
+                }
             }
             else 
             {

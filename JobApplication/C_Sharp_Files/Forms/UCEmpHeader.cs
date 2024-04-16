@@ -12,6 +12,8 @@ namespace JobApplication
 {
     public partial class UCEmpHeader : UserControl
     {
+        public Employer user;
+
         public UCEmpHeader()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace JobApplication
         {
             ((Form)this.TopLevelControl).Close();
             FMyPosts fMyPosts = new FMyPosts();
+            //FMyPosts fMyPosts = new FMyPosts(user);
             fMyPosts.Show();
         }
     }

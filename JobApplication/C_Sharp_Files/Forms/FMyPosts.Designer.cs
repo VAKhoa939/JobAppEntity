@@ -39,7 +39,7 @@
             this.flpKetQua.AutoScroll = true;
             this.flpKetQua.Location = new System.Drawing.Point(141, 351);
             this.flpKetQua.Name = "flpKetQua";
-            this.flpKetQua.Size = new System.Drawing.Size(1620, 630);
+            this.flpKetQua.Size = new System.Drawing.Size(1620, 551);
             this.flpKetQua.TabIndex = 7;
             // 
             // lblSoLuongKQ
@@ -55,6 +55,7 @@
             // ucEmpHeader1
             // 
             this.ucEmpHeader1.BackColor = System.Drawing.Color.Coral;
+            this.ucEmpHeader1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucEmpHeader1.Location = new System.Drawing.Point(-8, 51);
             this.ucEmpHeader1.Name = "ucEmpHeader1";
             this.ucEmpHeader1.Size = new System.Drawing.Size(1920, 120);

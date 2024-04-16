@@ -16,7 +16,9 @@ namespace JobApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FMyPosts());
+            FLogin fLogin = new FLogin();
+            Application.Run(fLogin);
+            fLogin.Close();
         }
     }
 }

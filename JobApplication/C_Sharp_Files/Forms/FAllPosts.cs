@@ -13,17 +13,19 @@ namespace JobApplication
     public partial class FAllPosts : Form
     {
         private CompanyDAO companyDAO = new CompanyDAO();
-        private JobSeeker jobSeeker;
+        private JobSeeker user;
 
         public FAllPosts()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
-        public FAllPosts(JobSeeker jobSeeker)
+        public FAllPosts(JobSeeker user)
         {
             InitializeComponent();
-            this.jobSeeker = jobSeeker;
+            WindowState = FormWindowState.Maximized;
+            this.user = user;
         }
 
         private void FAllPost_Load(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace JobApplication
                     foreach (Post post in employer.Posts)
                     {
                         noPosts++;
-                        UCSeekPost ucPost = new UCSeekPost(post, company, jobSeeker);
+                        UCSeekPost ucPost = new UCSeekPost(post, company, user);
                         flpKetQua.Controls.Add(ucPost);
                     }
                 }

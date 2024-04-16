@@ -12,10 +12,17 @@ namespace JobApplication
         private ImageList uploadedImages = new ImageList();
         private int currentPictureBoxIndex = 0;
         private PostDAO postDAO = new PostDAO();
+        private Employer user;
 
         public FCreatePost()
         {
             InitializeComponent();
+        }
+
+        public FCreatePost(Employer user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void btnSelectImages_Click(object sender, EventArgs e)
@@ -102,10 +109,7 @@ namespace JobApplication
             tmp.Images.Add(this.pbxJobImages2.Image);
             tmp.Images.Add(this.pbxJobImages3.Image);
             postDAO.Insert_1(tmp);
-
-            // Create new UCSeekPost
-           
-
+            postDAO.Insert(tmp, user);
         }
     }
 }
