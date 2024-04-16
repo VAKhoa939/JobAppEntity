@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -171,6 +186,9 @@
     <EmbeddedResource Include="C_Sharp_Files\Forms\FHomePage.resx">
       <DependentUpon>FHomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Sharp_Files\Forms\FLogin.aa.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Sharp_Files\Forms\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +225,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -225,6 +244,7 @@
   <ItemGroup>
     <Content Include="Images\Cat.jpg" />
     <Content Include="Images\jun-seong-park-retouched.gif" />
+    <None Include="Images\Nitro_Wallpaper_5000x2813.jpg" />
     <Content Include="Images\Starrail1.png" />
     <Content Include="Images\Suletta.Mercury.600.3950579.jpg" />
     <Content Include="Images\𝐒𝐔𝐋𝐄𝐓𝐓𝐀 𝐌𝐄𝐑𝐂𝐔𝐑𝐘.jpg" />
@@ -240,6 +260,7 @@
     <Content Include="Queries\PostQuery.sql" />
     <Content Include="Queries\PostTagCatalogQuery.sql" />
     <Content Include="Queries\SeekFormCatalogQuery.sql" />
+    <None Include="Resources\Nitro_Wallpaper_5000x2813.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

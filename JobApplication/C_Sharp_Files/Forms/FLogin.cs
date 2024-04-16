@@ -24,12 +24,8 @@ namespace JobApplication
             InitializeComponent();
             listCompany = companyDAO.GetList();
             listEmployer = employerDAO.GetList();
+            //WindowState = FormWindowState.Maximized;
             listJobSeeker = jobSeekerDAO.GetList();
-        }
-
-        private void pnlRegister_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -46,6 +42,9 @@ namespace JobApplication
                         return;
                     }
                 }
+                MessageBox.Show("UserName or Password is not correct, please try again!");
+                txtUserNameLogin.Text = string.Empty;
+                txtPasswordLogin.Text = string.Empty;
             }
             else if (rdoEmployerLogin.Checked)
             {
@@ -58,6 +57,9 @@ namespace JobApplication
                         fMyPosts.Show();
                     }
                 }
+                MessageBox.Show("UserName or Password is not correct, please try again!");
+                txtUserNameLogin.Text = string.Empty;
+                txtPasswordLogin.Text = string.Empty;
             }
             else 
             {
@@ -65,6 +67,37 @@ namespace JobApplication
                 FAdmin fAdmin = new FAdmin();
                 fAdmin.Show();
             }
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FLogin_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void picComLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComChooseimage_Click(object sender, EventArgs e)
+        {
+            picComLogo.Image = new Bitmap(ImageUtil.UploadImage(), new Size(70, 70));
+        }
+
+        private void btnCompRegister_Click(object sender, EventArgs e)
+        {
+            Company company = new Company(txtCompanyNameComp.Text, picComLogo.Image);
+            companyDAO.Insert(company);
+        }
+
+        private void btnJSRegister_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

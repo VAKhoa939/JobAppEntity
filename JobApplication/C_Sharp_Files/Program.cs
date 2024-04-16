@@ -16,9 +16,7 @@ namespace JobApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FLogin fLogin = new FLogin();
-            Application.Run(fLogin);
-            fLogin.Close();
+            Application.Run(new FLogin());
         }
     }
 }

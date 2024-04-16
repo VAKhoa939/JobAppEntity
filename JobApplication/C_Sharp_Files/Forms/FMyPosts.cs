@@ -17,6 +17,13 @@ namespace JobApplication
         private ComEmpCatalogDAO comEmpDAO = new ComEmpCatalogDAO();
         private Employer user;
 
+
+        public FMyPosts()
+        {
+            InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+        }
+
         public FMyPosts(Employer user)
         {
             InitializeComponent();
@@ -25,13 +32,7 @@ namespace JobApplication
             this.user = user;
         }
 
-        public FMyPosts()
-        {
-            InitializeComponent();
-            WindowState = FormWindowState.Maximized;
-        }
-
-    private void FMyPosts_Load(object sender, EventArgs e)
+        private void FMyPosts_Load(object sender, EventArgs e)
         {
             int noPosts = 0;
 

@@ -79,6 +79,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Coral;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -93,6 +94,7 @@
             // 
             // allJobsToolStripMenuItem
             // 
+            this.allJobsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.allJobsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jobsBySkillToolStripMenuItem,
             this.jobsByTitleToolStripMenuItem1,
@@ -128,6 +130,7 @@
             // 
             // forEmployersToolStripMenuItem
             // 
+            this.forEmployersToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.forEmployersToolStripMenuItem.Name = "forEmployersToolStripMenuItem";
             this.forEmployersToolStripMenuItem.Size = new System.Drawing.Size(223, 41);
             this.forEmployersToolStripMenuItem.Text = "For Employers";

@@ -22,9 +22,8 @@ namespace JobApplication
         private void createAPostToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ((Form)this.TopLevelControl).Close();
-            FMyPosts fMyPosts = new FMyPosts();
-            //FMyPosts fMyPosts = new FMyPosts(user);
-            fMyPosts.Show();
+            FCreatePost fCreatePost = new FCreatePost();
+            fCreatePost.Show();
         }
     }
 }
