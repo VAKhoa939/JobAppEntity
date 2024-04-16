@@ -14,6 +14,12 @@ namespace JobApplication
             this.selectedPost = post;
         }
 
+        public FPostDetail(Post post, Company company, JobSeeker user)
+        {
+            InitializeComponent();
+            this.selectedPost = post;
+        }
+
         private void FPostDetail_Load(object sender, EventArgs e)
         {
             DisplayPostDetails();
