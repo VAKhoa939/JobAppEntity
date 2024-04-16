@@ -127,9 +127,6 @@
   <data name="Nitro_Wallpaper_5000x2813" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Nitro_Wallpaper_5000x2813.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Nitro_Wallpaper_5000x28131" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Nitro_Wallpaper_5000x2813.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Starrail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Starrail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
