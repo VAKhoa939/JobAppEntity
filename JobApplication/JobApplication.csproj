@@ -260,7 +260,6 @@
     <Content Include="Queries\PostQuery.sql" />
     <Content Include="Queries\PostTagCatalogQuery.sql" />
     <Content Include="Queries\SeekFormCatalogQuery.sql" />
-    <None Include="Resources\Nitro_Wallpaper_5000x2813.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

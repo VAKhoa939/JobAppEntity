@@ -447,7 +447,7 @@ namespace JobApplication
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::JobApplication.Properties.Resources.Nitro_Wallpaper_5000x2813;
+            this.BackgroundImage = new Bitmap("C:\\Users\\Admin\\source\\repos\\Winform-JobApp2\\ThamKhao\\WinForm-JobApp\\JobApplication\\Images\\jun-seong-park-retouched.gif");
             this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
             this.Name = "FLogin";
