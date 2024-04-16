@@ -27,9 +27,24 @@ namespace JobApplication
         public string PostSalary { get { return postSalary; } set { postSalary = value; lblTienLuong.Text = postSalary; } }
         public string PostOther { get { return postOther; } set { postOther = value; lblKhac.Text = postOther;  } }
         //public Image PostImage { get { return postImage; } set { postImage = value; imgLogo.; } }
-        public UCSeekPost()
+        public UCSeekPost(Post post)
         {
             InitializeComponent();
+            this.post = post;
+
+            DateTime delta = new DateTime(DateTime.Now.Ticks - post.TimePosted.Ticks);
+            lblThoiGianDang.Text = "Posted " + delta.Hour + " hours ago";
+            lklblTenBaiDang.Text = post.Name;
+            lblTienLuong.Text = post.Salary.ToString();
+            lblKhac.Text = post.Others.Replace("\\n", System.Environment.NewLine);
+            foreach (string tag in post.Tags)
+            {
+                Button btnTag = new Button();
+                btnTag.Text = tag;
+                btnTag.Size = new Size(100, 32);
+                btnTag.Font = new Font("Times New Roman", 11);
+                flpTags.Controls.Add(btnTag);
+            }
         }
 
         public UCSeekPost(Post post, Company company, JobSeeker jobSeeker)
@@ -64,9 +79,9 @@ namespace JobApplication
 
         public void lklblTenBaiDang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ((Form)this.TopLevelControl).Close();
-            FPostDetail fPostDetail = new FPostDetail();
-            fPostDetail.Show();
+                ((Form)this.TopLevelControl).Hide();
+                FPostDetail fPostDetail = new FPostDetail(post);
+                fPostDetail.Show();
         }
     }
 }

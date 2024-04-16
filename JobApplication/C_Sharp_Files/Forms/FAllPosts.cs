@@ -26,12 +26,7 @@ namespace JobApplication
             this.jobSeeker = jobSeeker;
         }
 
-
-<<<<<<< HEAD
         private void FAllPost_Load(object sender, EventArgs e)
-=======
-        private void TinTuyenDung_Load(object sender, EventArgs e)
->>>>>>> 48fe712bab702f4c81b08e3ae25d93ac32416932
         {
             int noPosts = 0;
 
