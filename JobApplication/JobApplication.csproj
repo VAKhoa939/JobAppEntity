@@ -219,19 +219,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -244,9 +244,14 @@
   <ItemGroup>
     <Content Include="Images\Cat.jpg" />
     <Content Include="Images\jun-seong-park-retouched.gif" />
+    <None Include="Resources\a43ee3ea-fc85-4ffd-b59b-c0e38bb638bc.jpg" />
+    <None Include="Resources\R.jpg" />
+    <None Include="Resources\SIM.jpg" />
+    <None Include="Resources\OIP.jpg" />
     <None Include="Images\Nitro_Wallpaper_5000x2813.jpg" />
     <Content Include="Images\Starrail1.png" />
     <Content Include="Images\Suletta.Mercury.600.3950579.jpg" />
+    <None Include="Images\user.png" />
     <Content Include="Images\𝐒𝐔𝐋𝐄𝐓𝐓𝐀 𝐌𝐄𝐑𝐂𝐔𝐑𝐘.jpg" />
     <Content Include="Queries\ApplyFormQuery.sql" />
     <Content Include="Queries\ComEmpCatalogQuery.sql" />
