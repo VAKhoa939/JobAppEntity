@@ -139,12 +139,12 @@ namespace JobApplication
             // 
             resources.ApplyResources(this.rdoEmployerLogin, "rdoEmployerLogin");
             this.rdoEmployerLogin.Name = "rdoEmployerLogin";
-            this.rdoEmployerLogin.TabStop = true;
             this.rdoEmployerLogin.UseVisualStyleBackColor = true;
             // 
             // rdoJobSeekerLogin
             // 
             resources.ApplyResources(this.rdoJobSeekerLogin, "rdoJobSeekerLogin");
+            this.rdoJobSeekerLogin.Checked = true;
             this.rdoJobSeekerLogin.Name = "rdoJobSeekerLogin";
             this.rdoJobSeekerLogin.TabStop = true;
             this.rdoJobSeekerLogin.UseVisualStyleBackColor = true;
@@ -153,6 +153,7 @@ namespace JobApplication
             // 
             resources.ApplyResources(this.txtPasswordLogin, "txtPasswordLogin");
             this.txtPasswordLogin.Name = "txtPasswordLogin";
+            this.txtPasswordLogin.UseSystemPasswordChar = true;
             // 
             // txtUserNameLogin
             // 
@@ -202,7 +203,6 @@ namespace JobApplication
             this.tabPage3.Controls.Add(this.pnlRegister);
             resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // pnlRegister
             // 
@@ -270,11 +270,13 @@ namespace JobApplication
             // 
             resources.ApplyResources(this.txtPasswordRepeatJS, "txtPasswordRepeatJS");
             this.txtPasswordRepeatJS.Name = "txtPasswordRepeatJS";
+            this.txtPasswordRepeatJS.UseSystemPasswordChar = true;
             // 
             // txtPasswordJS
             // 
             resources.ApplyResources(this.txtPasswordJS, "txtPasswordJS");
             this.txtPasswordJS.Name = "txtPasswordJS";
+            this.txtPasswordJS.UseSystemPasswordChar = true;
             // 
             // txtLastNameJS
             // 
@@ -359,6 +361,7 @@ namespace JobApplication
             // 
             resources.ApplyResources(this.txtRepeatPasswordEmp, "txtRepeatPasswordEmp");
             this.txtRepeatPasswordEmp.Name = "txtRepeatPasswordEmp";
+            this.txtRepeatPasswordEmp.UseSystemPasswordChar = true;
             // 
             // txtPhoneNumberEmp
             // 
@@ -374,6 +377,7 @@ namespace JobApplication
             // 
             resources.ApplyResources(this.txtPasswordEmp, "txtPasswordEmp");
             this.txtPasswordEmp.Name = "txtPasswordEmp";
+            this.txtPasswordEmp.UseSystemPasswordChar = true;
             // 
             // txtLastNameEmp
             // 
@@ -452,7 +456,6 @@ namespace JobApplication
             resources.ApplyResources(this.picComLogo, "picComLogo");
             this.picComLogo.Name = "picComLogo";
             this.picComLogo.TabStop = false;
-            this.picComLogo.Click += new System.EventHandler(this.picComLogo_Click);
             // 
             // btnComChooseimage
             // 
@@ -501,7 +504,6 @@ namespace JobApplication
             this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
             this.Name = "FLogin";
-            this.Load += new System.EventHandler(this.FLogin_Load);
             this.tbLogin.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.pnlLogin.ResumeLayout(false);

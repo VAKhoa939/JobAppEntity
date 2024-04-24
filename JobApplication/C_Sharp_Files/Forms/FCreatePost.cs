@@ -103,15 +103,47 @@ namespace JobApplication
         {
             // Create new Post object
             int id = postDAO.GetList().Count;
-            string other = string.Format($"{txtAddress.Text}\n{this.cbxWork.GetItemText(this.cbxWork.SelectedItem)}");
-            Post tmp = new Post(id,txtPostName.Text, Convert.ToDecimal(txtSalary.Text), other);
-            tmp.Images.Add(this.pbxJobImages1.Image);
-            tmp.Images.Add(this.pbxJobImages2.Image);
-            tmp.Images.Add(this.pbxJobImages3.Image);
-            tmp.JobDescs.Add("- Skill Requirement: " + txtSkillReq.Text);
-            tmp.JobDescs.Add("- In this job you need to work about: " + txtWorkHours.Text);
-            tmp.JobDescs.Add("- For any further detail please contact by: " + txtContact.Text);
-            postDAO.Insert(tmp, user);
+            string others = string.Format($"{txtAddress.Text}\n{this.cbxWork.GetItemText(this.cbxWork.SelectedItem)}");
+            Post tmp = new Post
+            {
+                Name = txtPostName.Text, 
+                Salary = Convert.ToDecimal(txtSalary.Text), 
+                Others = others
+            };
+            tmp.Employer = user;
+
+            PostImageCatalog postImage1 = new PostImageCatalog
+            {
+                Image = ImageUtil.ImageToString(this.pbxJobImages1.Image)
+            };
+            tmp.Images.Add(postImage1);
+            PostImageCatalog postImage2 = new PostImageCatalog
+            {
+                Image = ImageUtil.ImageToString(this.pbxJobImages2.Image)
+            };
+            tmp.Images.Add(postImage2);
+            PostImageCatalog postImage3 = new PostImageCatalog
+            {
+                Image = ImageUtil.ImageToString(this.pbxJobImages3.Image)
+            };
+            tmp.Images.Add(postImage3);
+
+            PostDescCatalog postDesc1 = new PostDescCatalog
+            {
+                JobDesc = "- Skill Requirement: " + txtSkillReq.Text
+            };
+            tmp.JobDescs.Add(postDesc1);
+            PostDescCatalog postDesc2 = new PostDescCatalog
+            {
+                JobDesc = "- In this job you need to work about: " + txtWorkHours.Text
+            };
+            tmp.JobDescs.Add(postDesc2);
+            PostDescCatalog postDesc3 = new PostDescCatalog
+            {
+                JobDesc = "- For any further detail please contact by: " + txtContact.Text
+            };
+            tmp.JobDescs.Add(postDesc3);
+            postDAO.Insert(tmp);
             user.Posts.Add(tmp);
         }
     }

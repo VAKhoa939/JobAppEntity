@@ -12,6 +12,22 @@ namespace JobApplication
 {
     public static class ImageUtil
     {
+        public static string ImageToString(Image image)
+        {
+            if (image == null) return null;
+            MemoryStream memoryStream = new MemoryStream();
+            image.Save(memoryStream, ImageFormat.Jpeg);
+            byte[] bytes = memoryStream.ToArray();
+            return Convert.ToBase64String(bytes);
+        }
+
+        public static Image StringToImage(string str)
+        {
+            byte[] bytes = Convert.FromBase64String(str);
+            MemoryStream memoryStream = new MemoryStream(bytes);
+            return Image.FromStream(memoryStream);
+        }
+
         public static byte[] ImageToByte(Image image)
         {
             if (image == null) return null;

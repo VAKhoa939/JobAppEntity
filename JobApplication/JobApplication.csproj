@@ -48,11 +48,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,32 +73,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C_Sharp_Files\Classes\ApplyForm.cs" />
-    <Compile Include="C_Sharp_Files\Classes\Company.cs" />
-    <Compile Include="C_Sharp_Files\Classes\Employer.cs" />
-    <Compile Include="C_Sharp_Files\Classes\JobSeeker.cs" />
-    <Compile Include="C_Sharp_Files\Classes\Post.cs" />
-    <Compile Include="C_Sharp_Files\Classes\User.cs" />
+    <Compile Include="ApplyForm.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="C_Sharp_Files\DAOs\AnyDAO.cs" />
     <Compile Include="C_Sharp_Files\DAOs\ApplyFormDAO.cs" />
-    <Compile Include="C_Sharp_Files\DAOs\ComEmpCatalogDAO.cs" />
     <Compile Include="C_Sharp_Files\DAOs\CompanyDAO.cs" />
-    <Compile Include="C_Sharp_Files\DAOs\DBConnection.cs" />
     <Compile Include="C_Sharp_Files\DAOs\EmployerDAO.cs" />
-    <Compile Include="C_Sharp_Files\DAOs\EmpPostCatalogDAO.cs" />
     <Compile Include="C_Sharp_Files\DAOs\JobSeekerDAO.cs" />
     <Compile Include="C_Sharp_Files\DAOs\PostDAO.cs" />
     <Compile Include="C_Sharp_Files\DAOs\PostDescCatalogDAO.cs" />
-    <Compile Include="C_Sharp_Files\DAOs\PostFormCatalogDAO.cs" />
-    <Compile Include="C_Sharp_Files\DAOs\PostImgCatalogDAO.cs" />
+    <Compile Include="C_Sharp_Files\DAOs\PostImageCatalogDAO.cs" />
     <Compile Include="C_Sharp_Files\DAOs\PostTagCatalogDAO.cs" />
-    <Compile Include="C_Sharp_Files\DAOs\SeekFormCatalogDAO.cs" />
-    <Compile Include="C_Sharp_Files\Forms\FAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="C_Sharp_Files\Forms\FAdmin.Designer.cs">
-      <DependentUpon>FAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="C_Sharp_Files\Forms\FAllPosts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,10 +168,43 @@
     </Compile>
     <Compile Include="C_Sharp_Files\Program.cs" />
     <Compile Include="C_Sharp_Files\Utils\ImageUtil.cs" />
+    <Compile Include="Employer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobSeeker.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Post.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostDescCatalog.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostImageCatalog.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostTagCatalog.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="C_Sharp_Files\Forms\FAdmin.resx">
-      <DependentUpon>FAdmin.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="C_Sharp_Files\Forms\FAllPosts.resx">
       <DependentUpon>FAllPosts.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,10 +249,17 @@
       <DependentUpon>UCSeekPost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -249,18 +287,20 @@
     <Content Include="Images\Suletta.Mercury.600.3950579.jpg" />
     <None Include="Images\user.png" />
     <Content Include="Images\𝐒𝐔𝐋𝐄𝐓𝐓𝐀 𝐌𝐄𝐑𝐂𝐔𝐑𝐘.jpg" />
-    <Content Include="Queries\ApplyFormQuery.sql" />
-    <Content Include="Queries\ComEmpCatalogQuery.sql" />
-    <Content Include="Queries\CompanyQuery.sql" />
-    <Content Include="Queries\EmployerQuery.sql" />
-    <Content Include="Queries\EmpPostCatalogQuery.sql" />
-    <Content Include="Queries\JobSeekerQuery.sql" />
-    <Content Include="Queries\PostDescCatalogQuery.sql" />
-    <Content Include="Queries\PostFormCatalogQuery.sql" />
-    <Content Include="Queries\PostImgCatalogQuery.sql" />
-    <Content Include="Queries\PostQuery.sql" />
-    <Content Include="Queries\PostTagCatalogQuery.sql" />
-    <Content Include="Queries\SeekFormCatalogQuery.sql" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.edmx.sql" />
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

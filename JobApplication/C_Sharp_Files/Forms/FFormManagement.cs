@@ -6,18 +6,20 @@ namespace JobApplication
 {
     public partial class FFormManagement : Form
     {
-        private Post selectedPost;
+        private Post post;
+        private Employer user;
 
         public FFormManagement(Post post)
         {
             InitializeComponent();
-            this.selectedPost = post;
+            this.post = post;
         }
 
-        public FFormManagement(Post post, Company company, JobSeeker user)
+        public FFormManagement(Post post, Employer user)
         {
             InitializeComponent();
-            this.selectedPost = post;
+            this.post = post;
+            this.user = user;
         }
 
         private void FFormManagement_Load(object sender, EventArgs e)
@@ -27,14 +29,14 @@ namespace JobApplication
 
         private void DisplayPostDetails()
         {
-            lblPostName.Text = selectedPost.Name;
-            lblPostSalary.Text = $"Salary: {selectedPost.Salary.ToString("C")}";
-            lblPostOther.Text = selectedPost.Others.Replace("\\n", Environment.NewLine);
-            lblPostTime.Text = $"Posted on: {selectedPost.TimePosted.ToShortDateString()}";
-            foreach(string desc in selectedPost.JobDescs)
+            lblPostName.Text = post.Name;
+            lblPostSalary.Text = $"Salary: {post.Salary.ToString("C")}";
+            lblPostOther.Text = post.Others.Replace("\\n", Environment.NewLine);
+            lblPostTime.Text = $"Posted on: {post.Timeposted.ToShortDateString()}";
+            foreach(PostDescCatalog postDesc in post.JobDescs)
             {
                 Label detail = new Label();
-                detail.Text = desc;
+                detail.Text = postDesc.JobDesc;
                 detail.Size = new Size(930, 50);
                 flpJobDesc.Controls.Add(detail);
             }
@@ -42,9 +44,9 @@ namespace JobApplication
             imageListJobImage.Images.Clear();
 
             // Add images from selectedPost to imageListJobImage
-            foreach (Image img in selectedPost.Images)
+            foreach (PostImageCatalog postImage in post.Images)
             {
-                imageListJobImage.Images.Add(img);
+                imageListJobImage.Images.Add(ImageUtil.StringToImage(postImage.Image));
             }
 
             // Start the timer to display images

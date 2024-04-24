@@ -13,7 +13,6 @@ namespace JobApplication
     public partial class UCEmpPost : UserControl
     {
         private Post post;
-        private Company company;
         private Employer user;
 
         public UCEmpPost()
@@ -21,24 +20,24 @@ namespace JobApplication
             InitializeComponent();
         }
 
-        public UCEmpPost(Post post, Company company, Employer user)
+        public UCEmpPost(Post post, Employer user)
         {
             InitializeComponent();
             this.post = post;
-            this.company = company;
             this.user = user;
+            Company company = user.Company;
 
-            DateTime delta = new DateTime(DateTime.Now.Ticks - post.TimePosted.Ticks);
+            DateTime delta = new DateTime(DateTime.Now.Ticks - post.Timeposted.Ticks);
             lblThoiGianDang.Text = "Posted " + delta.Hour + " hours ago";
             lklblTenBaiDang.Text = post.Name;
-            imgLogo.Image = company.Logo;
+            imgLogo.Image = ImageUtil.StringToImage(company.Logo);
             lblTenCongTy.Text = company.Name;
             lblTienLuong.Text = post.Salary.ToString();
             lblKhac.Text = post.Others.Replace("\\n", System.Environment.NewLine);
-            foreach (string tag in post.Tags)
+            foreach (PostTagCatalog postTag in post.SkillTags)
             {
                 Button btnTag = new Button();
-                btnTag.Text = tag;
+                btnTag.Text = postTag.Tag;
                 btnTag.Size = new Size(100, 32);
                 btnTag.Font = new Font("Times New Roman", 11);
                 flpTags.Controls.Add(btnTag);
@@ -48,8 +47,7 @@ namespace JobApplication
         private void lklblTenBaiDang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ((Form)this.TopLevelControl).Close();
-            //FFormManagement fFormManagement = new FFormManagement(post, company, user);
-            FFormManagement fFormManagement = new FFormManagement(post);
+            FFormManagement fFormManagement = new FFormManagement(post, user);
             fFormManagement.ShowDialog();
         }
     }

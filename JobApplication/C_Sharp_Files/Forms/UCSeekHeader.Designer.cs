@@ -54,9 +54,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 49);
+            this.label1.Size = new System.Drawing.Size(242, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "TimViecLam.vn";
             // 
@@ -64,17 +65,19 @@
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(40, 55);
+            this.panel1.Location = new System.Drawing.Point(30, 45);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1858, 64);
+            this.panel1.Size = new System.Drawing.Size(1394, 52);
             this.panel1.TabIndex = 6;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.menuStrip1);
-            this.panel2.Location = new System.Drawing.Point(330, 3);
+            this.panel2.Location = new System.Drawing.Point(248, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1525, 49);
+            this.panel2.Size = new System.Drawing.Size(1144, 40);
             this.panel2.TabIndex = 1;
             // 
             // menuStrip1
@@ -88,7 +91,8 @@
             this.accountToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1525, 45);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1144, 39);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -101,38 +105,38 @@
             this.jobsByCompanyToolStripMenuItem1,
             this.jobsByCityToolStripMenuItem});
             this.allJobsToolStripMenuItem.Name = "allJobsToolStripMenuItem";
-            this.allJobsToolStripMenuItem.Size = new System.Drawing.Size(137, 41);
+            this.allJobsToolStripMenuItem.Size = new System.Drawing.Size(116, 35);
             this.allJobsToolStripMenuItem.Text = "All Jobs";
             // 
             // jobsBySkillToolStripMenuItem
             // 
             this.jobsBySkillToolStripMenuItem.Name = "jobsBySkillToolStripMenuItem";
-            this.jobsBySkillToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
+            this.jobsBySkillToolStripMenuItem.Size = new System.Drawing.Size(276, 36);
             this.jobsBySkillToolStripMenuItem.Text = "Jobs by skill";
             // 
             // jobsByTitleToolStripMenuItem1
             // 
             this.jobsByTitleToolStripMenuItem1.Name = "jobsByTitleToolStripMenuItem1";
-            this.jobsByTitleToolStripMenuItem1.Size = new System.Drawing.Size(331, 42);
+            this.jobsByTitleToolStripMenuItem1.Size = new System.Drawing.Size(276, 36);
             this.jobsByTitleToolStripMenuItem1.Text = "Jobs by title";
             // 
             // jobsByCompanyToolStripMenuItem1
             // 
             this.jobsByCompanyToolStripMenuItem1.Name = "jobsByCompanyToolStripMenuItem1";
-            this.jobsByCompanyToolStripMenuItem1.Size = new System.Drawing.Size(331, 42);
+            this.jobsByCompanyToolStripMenuItem1.Size = new System.Drawing.Size(276, 36);
             this.jobsByCompanyToolStripMenuItem1.Text = "Jobs by company";
             // 
             // jobsByCityToolStripMenuItem
             // 
             this.jobsByCityToolStripMenuItem.Name = "jobsByCityToolStripMenuItem";
-            this.jobsByCityToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
+            this.jobsByCityToolStripMenuItem.Size = new System.Drawing.Size(276, 36);
             this.jobsByCityToolStripMenuItem.Text = "Jobs by city";
             // 
             // forEmployersToolStripMenuItem
             // 
             this.forEmployersToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.forEmployersToolStripMenuItem.Name = "forEmployersToolStripMenuItem";
-            this.forEmployersToolStripMenuItem.Size = new System.Drawing.Size(223, 41);
+            this.forEmployersToolStripMenuItem.Size = new System.Drawing.Size(188, 35);
             this.forEmployersToolStripMenuItem.Text = "For Employers";
             // 
             // accountToolStripMenuItem
@@ -144,32 +148,33 @@
             this.settingsToolStripMenuItem1,
             this.signOutToolStripMenuItem1});
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(140, 41);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(119, 35);
             this.accountToolStripMenuItem.Text = "Account";
             // 
             // profileCVsToolStripMenuItem
             // 
             this.profileCVsToolStripMenuItem.Name = "profileCVsToolStripMenuItem";
-            this.profileCVsToolStripMenuItem.Size = new System.Drawing.Size(268, 42);
+            this.profileCVsToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
             this.profileCVsToolStripMenuItem.Text = "Profile & CVs";
             // 
             // myJobsToolStripMenuItem1
             // 
             this.myJobsToolStripMenuItem1.Name = "myJobsToolStripMenuItem1";
-            this.myJobsToolStripMenuItem1.Size = new System.Drawing.Size(268, 42);
+            this.myJobsToolStripMenuItem1.Size = new System.Drawing.Size(222, 36);
             this.myJobsToolStripMenuItem1.Text = "My Jobs";
             // 
             // settingsToolStripMenuItem1
             // 
             this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(268, 42);
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(222, 36);
             this.settingsToolStripMenuItem1.Text = "Settings";
             // 
             // signOutToolStripMenuItem1
             // 
             this.signOutToolStripMenuItem1.Name = "signOutToolStripMenuItem1";
-            this.signOutToolStripMenuItem1.Size = new System.Drawing.Size(268, 42);
+            this.signOutToolStripMenuItem1.Size = new System.Drawing.Size(222, 36);
             this.signOutToolStripMenuItem1.Text = "Sign Out";
+            this.signOutToolStripMenuItem1.Click += new System.EventHandler(this.signOutToolStripMenuItem1_Click);
             // 
             // jobsByToolStripMenuItem1
             // 
@@ -185,12 +190,13 @@
             // 
             // UCSeekHeader
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UCSeekHeader";
-            this.Size = new System.Drawing.Size(1920, 120);
+            this.Size = new System.Drawing.Size(1440, 98);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

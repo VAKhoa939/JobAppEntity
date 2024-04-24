@@ -22,9 +22,9 @@ namespace JobApplication
         public FLogin()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
             listCompany = companyDAO.GetList();
             listEmployer = employerDAO.GetList();
-            //WindowState = FormWindowState.Maximized;
             listJobSeeker = jobSeekerDAO.GetList();
         }
 
@@ -34,7 +34,7 @@ namespace JobApplication
             {
                 foreach(JobSeeker js in listJobSeeker)
                 {
-                    if (js.UserName.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
+                    if (js.Username.Equals(txtUserNameLogin.Text) && (js.Password.Equals(txtPasswordLogin.Text)))
                     {
                         Hide();
                         FAllPosts fAllPosts = new FAllPosts(js);
@@ -42,7 +42,7 @@ namespace JobApplication
                         return;
                     }
                 }
-                MessageBox.Show("UserName or Password is not correct, please try again!");
+                MessageBox.Show("User Name or Password is not correct, please try again!");
                 txtUserNameLogin.Text = string.Empty;
                 txtPasswordLogin.Text = string.Empty;
             }
@@ -50,7 +50,7 @@ namespace JobApplication
             {
                 foreach (Employer emp in listEmployer)
                 {
-                    if (emp.UserName.Equals(txtUserNameLogin.Text) && (emp.Password.Equals(txtPasswordLogin.Text)))
+                    if (emp.Username.Equals(txtUserNameLogin.Text) && (emp.Password.Equals(txtPasswordLogin.Text)))
                     {
                         Hide();
                         FMyPosts fMyPosts = new FMyPosts(emp);
@@ -58,31 +58,10 @@ namespace JobApplication
                         return;
                     }
                 }
-                MessageBox.Show("UserName or Password is not correct, please try again!");
+                MessageBox.Show("User Name or Password is not correct, please try again!");
                 txtUserNameLogin.Text = string.Empty;
                 txtPasswordLogin.Text = string.Empty;
             }
-            else 
-            {
-                this.Hide();
-                FAdmin fAdmin = new FAdmin();
-                fAdmin.Show();
-            }
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FLogin_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void picComLogo_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnComChooseimage_Click(object sender, EventArgs e)
@@ -92,7 +71,12 @@ namespace JobApplication
 
         private void btnCompRegister_Click(object sender, EventArgs e)
         {
-            Company company = new Company(txtCompanyNameComp.Text, picComLogo.Image);
+            Company company = new Company
+            {
+                Name = txtCompanyNameComp.Text,
+                Logo = ImageUtil.ImageToString(picComLogo.Image)
+            };
+
             foreach (var comp in listCompany)
             {
                 if (txtCompanyNameComp.Text != comp.Name)
@@ -108,38 +92,68 @@ namespace JobApplication
 
         private void btnJSRegister_Click(object sender, EventArgs e)
         {
-            JobSeeker jobSeeker = new JobSeeker(txtUserNameJS.Text,txtEmailJS.Text, txtPasswordJS.Text, txtPhoneNumberJS.Text, txtFirstNameJS.Text + txtLastNameJS);
-            
-            foreach(var jobseeker in listJobSeeker)
+            JobSeeker jobSeeker = new JobSeeker
             {
-                if(txtUserNameJS.Text != jobseeker.UserName)
+                Username = txtUserNameJS.Text,
+                Email = txtEmailJS.Text,
+                Password = txtPasswordJS.Text,
+                Phonenumber = txtPhoneNumberJS.Text,
+                Fullname = txtFirstNameJS.Text + txtLastNameJS,
+                Portraitimage = ImageUtil.ImageToString(Properties.Resources.user),
+                Address = string.Empty,
+                Birthdate = DateTime.Now
+            };
+            
+            foreach(var seeker in listJobSeeker)
+            {
+                if(txtUserNameJS.Text == seeker.Username)
                 {
-                    jobSeekerDAO.Insert(jobSeeker);
-                    listJobSeeker.Add(jobseeker);
-                    MessageBox.Show("Add new Job Seeker successfully");
+                    MessageBox.Show("User Name already registered");
                     return;
                 }
-                
             }
-            MessageBox.Show("UserName already registered");
+            jobSeekerDAO.Insert(jobSeeker);
+            listJobSeeker.Add(jobSeeker);
+            MessageBox.Show("Add new Job Seeker successfully");
         }
 
         private void btnEmployerRegister_Click(object sender, EventArgs e)
         {
-            Employer employer = new Employer(txtUserNameEmp.Text, txtEmailEmp.Text, txtPasswordEmp.Text, txtPhoneNumberEmp.Text,txtFirstNameEmp.Text + txtLastNameEmp.Text);
+            Employer employer = new Employer
+            {
+                Username = txtUserNameEmp.Text,
+                Email = txtEmailEmp.Text,
+                Password = txtPasswordEmp.Text,
+                Phonenumber = txtPhoneNumberEmp.Text,
+                Fullname = txtFirstNameJS.Text + txtLastNameJS,
+                Portraitimage = ImageUtil.ImageToString(Properties.Resources.user)
+            };
+            bool companyNameExist = false;
             foreach (var company in listCompany)
             {
                 if (txtCompanyNameComp.Text == company.Name)
                 {
-                    employerDAO.Insert(employer,company);
-                    MessageBox.Show("Add new Employer successfully");
+                    employer.Company = company;
+                    companyNameExist = true;
+                    break;
+                }
+            }
+            if (!companyNameExist)
+            {
+                MessageBox.Show("Company Name not registered!");
+                return;
+            }
+            foreach (var emp in listEmployer)
+            {
+                if (txtUserNameEmp.Text == emp.Username)
+                {
+                    MessageBox.Show("User Name already registered");
                     return;
                 }
             }
-            MessageBox.Show("Company Name not registered!");
-            
-
-            
+            employerDAO.Insert(employer);
+            listEmployer.Add(employer);
+            MessageBox.Show("Add new Employer successfully");
         }
     }
 }

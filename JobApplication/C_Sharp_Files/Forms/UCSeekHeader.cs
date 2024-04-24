@@ -16,5 +16,10 @@ namespace JobApplication
         {
             InitializeComponent();
         }
+
+        private void signOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

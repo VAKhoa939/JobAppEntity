@@ -14,7 +14,6 @@ namespace JobApplication
     public partial class UCSeekPost : UserControl
     {
         private Post post;
-        private Company company;
         private JobSeeker user;
 
         public UCSeekPost(Post post)
@@ -22,39 +21,39 @@ namespace JobApplication
             InitializeComponent();
             this.post = post;
 
-            DateTime delta = new DateTime(DateTime.Now.Ticks - post.TimePosted.Ticks);
+            DateTime delta = new DateTime(DateTime.Now.Ticks - post.Timeposted.Ticks);
             lblThoiGianDang.Text = "Posted " + delta.Hour + " hours ago";
             lklblTenBaiDang.Text = post.Name;
             lblTienLuong.Text = post.Salary.ToString();
             lblKhac.Text = post.Others.Replace("\\n", System.Environment.NewLine);
-            foreach (string tag in post.Tags)
+            foreach (PostTagCatalog postTag in post.SkillTags)
             {
                 Button btnTag = new Button();
-                btnTag.Text = tag;
+                btnTag.Text = postTag.Tag;
                 btnTag.Size = new Size(100, 32);
                 btnTag.Font = new Font("Times New Roman", 11);
                 flpTags.Controls.Add(btnTag);
             }
         }
 
-        public UCSeekPost(Post post, Company company, JobSeeker user)
+        public UCSeekPost(Post post, JobSeeker user)
         {
             InitializeComponent();
             this.post = post;
-            this.company = company;
             this.user = user;
+            Company company = post.Employer.Company;
 
-            DateTime delta = new DateTime(DateTime.Now.Ticks - post.TimePosted.Ticks);
+            DateTime delta = new DateTime(DateTime.Now.Ticks - post.Timeposted.Ticks);
             lblThoiGianDang.Text = "Posted " + delta.Hour + " hours ago";
             lklblTenBaiDang.Text = post.Name;
-            imgLogo.Image = company.Logo;
+            imgLogo.Image = ImageUtil.StringToImage(company.Logo);
             lblTenCongTy.Text = company.Name;
             lblTienLuong.Text = post.Salary.ToString();
             lblKhac.Text = post.Others.Replace("\\n", System.Environment.NewLine);
-            foreach (string tag in post.Tags)
+            foreach (PostTagCatalog postTag in post.SkillTags)
             {
                 Button btnTag = new Button();
-                btnTag.Text = tag;
+                btnTag.Text = postTag.Tag;
                 btnTag.Size = new Size(100, 32);
                 btnTag.Font = new Font("Times New Roman", 11);
                 flpTags.Controls.Add(btnTag);
@@ -64,7 +63,7 @@ namespace JobApplication
         public void lklblTenBaiDang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ((Form)this.TopLevelControl).Hide();
-            FPostDetail fPostDetail = new FPostDetail(post);
+            FPostDetail fPostDetail = new FPostDetail(post, user);
             fPostDetail.Show();
         }
     }

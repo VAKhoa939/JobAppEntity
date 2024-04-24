@@ -14,7 +14,6 @@ namespace JobApplication
     public partial class FMyPosts : Form
     {
         private CompanyDAO companyDAO = new CompanyDAO();
-        private ComEmpCatalogDAO comEmpDAO = new ComEmpCatalogDAO();
         private Employer user;
 
 
@@ -36,11 +35,10 @@ namespace JobApplication
         {
             int noPosts = 0;
 
-            Company company = companyDAO.GetCompany(comEmpDAO.GetComName(user.UserName));
             foreach (Post post in user.Posts)
             {
                 noPosts++;
-                UCEmpPost ucPost = new UCEmpPost(post, company, user);
+                UCEmpPost ucPost = new UCEmpPost(post, user);
                 flpKetQua.Controls.Add(ucPost);
             }
             lblSoLuongKQ.Text = "There are " + noPosts + " results";

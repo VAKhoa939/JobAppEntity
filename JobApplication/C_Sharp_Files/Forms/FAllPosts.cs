@@ -40,7 +40,7 @@ namespace JobApplication
                     foreach (Post post in employer.Posts)
                     {
                         noPosts++;
-                        UCSeekPost ucPost = new UCSeekPost(post, company, user);
+                        UCSeekPost ucPost = new UCSeekPost(post, user);
                         flpKetQua.Controls.Add(ucPost);
                     }
                 }

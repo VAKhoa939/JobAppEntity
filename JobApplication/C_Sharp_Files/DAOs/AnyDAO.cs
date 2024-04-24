@@ -7,22 +7,31 @@ using System.Threading.Tasks;
 
 namespace JobApplication
 {
-    class AnyDAO
+    class AnyDAO<T> where T : class
     {
-        protected DBConnection dBConn = new DBConnection();
-        protected string sqlStr = "";
-        protected string tableName = "";
+        protected JobAppDFEntities db = new JobAppDFEntities();
+        protected IQueryable<T> query;
 
-        public AnyDAO()
+        public List<T> GetList()
         {
-            tableName = GetType().Name;
-            tableName = tableName.Remove(tableName.Length - 3, 3);
+            return db.Set<T>().ToList();
         }
 
-        public DataTable Load()
+        public T GetObject(int id)
         {
-            sqlStr = string.Format("SELECT * FROM {0}", tableName);
-            return dBConn.Load(sqlStr);
+            return db.Set<T>().Find(id);
+        }
+
+        public void Insert(T anyObject)
+        {
+            db.Set<T>().Add(anyObject);
+            db.SaveChanges();
+        }
+
+        public void Delete(T anyObject)
+        {
+            db.Set<T>().Remove(anyObject);
+            db.SaveChanges();
         }
     }
 }
